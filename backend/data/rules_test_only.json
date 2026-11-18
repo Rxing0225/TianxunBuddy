@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "note": "全部规则为 TEST_ONLY，standard_ref 中的条款号均为待核占位，禁止用于正式造价成果。",
+    "generated_for": "TX-009 受限规则注册表",
+    "precision": "decimals 按 V3.1 A-40：工程量 m3 三位、m2/m 两位、kg 三位"
+  },
+  "rules": [
+    {
+      "rule_code": "QTY.BOQ.MASONRY.WALL.001",
+      "version": "2026.1",
+      "name": "实心砖墙体积（清单口径，扣门窗洞口）",
+      "component_type": "WALL",
+      "caliber": "QTY_BOQ",
+      "unit": "m3",
+      "expression": "(L * H - opening_area) * T",
+      "variables": {"L": "m", "H": "m", "T": "m", "opening_area": "m2"},
+      "condition": {"material_class": "MASONRY"},
+      "decimals": 3,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】",
+      "license_status": "TEST_ONLY",
+      "tests": [
+        {"params": {"L": "6", "H": "3", "T": "0.24", "opening_area": "2.1"}, "expect": "3.816"}
+      ]
+    },
+    {
+      "rule_code": "QTY.BOQ.CONC.COLUMN.001",
+      "version": "2026.1",
+      "name": "矩形柱混凝土体积",
+      "component_type": "COLUMN",
+      "caliber": "QTY_BOQ",
+      "unit": "m3",
+      "expression": "b * h * H",
+      "variables": {"b": "m", "h": "m", "H": "m"},
+      "condition": {"section": "RECTANGULAR"},
+      "decimals": 3,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】",
+      "license_status": "TEST_ONLY",
+      "tests": [{"params": {"b": "0.5", "h": "0.5", "H": "3"}, "expect": "0.750"}]
+    },
+    {
+      "rule_code": "QTY.BOQ.CONC.SLAB.001",
+      "version": "2026.1",
+      "name": "现浇混凝土板体积（含柱扣减参数）",
+      "component_type": "SLAB",
+      "caliber": "QTY_BOQ",
+      "unit": "m3",
+      "expression": "A * T - deduction",
+      "variables": {"A": "m2", "T": "m", "deduction": "m3"},
+      "decimals": 3,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】",
+      "license_status": "TEST_ONLY",
+      "tests": [{"params": {"A": "50", "T": "0.12", "deduction": "0.12"}, "expect": "5.880"}]
+    },
+    {
+      "rule_code": "QTY.BOQ.CONC.FORMWORK.SLAB.001",
+      "version": "2026.1",
+      "name": "板模板接触面积（底模 + 侧模）",
+      "component_type": "FORMWORK_SLAB",
+      "caliber": "QTY_BOQ",
+      "unit": "m2",
+      "expression": "A + perimeter * T",
+      "variables": {"A": "m2", "perimeter": "m", "T": "m"},
+      "decimals": 2,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】",
+      "license_status": "TEST_ONLY",
+      "tests": [{"params": {"A": "48.6", "perimeter": "28.2", "T": "0.12"}, "expect": "51.98"}]
+    },
+    {
+      "rule_code": "QTY.BOQ.REBAR.WEIGHT.001",
+      "version": "2026.1",
+      "name": "钢筋重量（长度 × 根数 × 单位理论重量）",
+      "component_type": "REBAR",
+      "caliber": "QTY_BOQ",
+      "unit": "kg",
+      "expression": "length * count * unit_weight",
+      "variables": {"length": "m", "count": "unitless", "unit_weight": "kg/m"},
+      "decimals": 3,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】；理论重量按 0.00617×d^2 计算",
+      "license_status": "TEST_ONLY",
+      "tests": [{"params": {"length": "12", "count": "20", "unit_weight": "0.88848"}, "expect": "213.235"}]
+    },
+    {
+      "rule_code": "QTY.BOQ.EARTH.EXC.001",
+      "version": "2026.1",
+      "name": "挖一般土方（四面放坡棱台，替代已撤稿的 F-01 公式）",
+      "component_type": "EARTHWORK",
+      "caliber": "QTY_BOQ",
+      "unit": "m3",
+      "expression": "a * b * H + K * (a + b) * H ** 2 + (4 / 3) * K ** 2 * H ** 3",
+      "variables": {"a": "m", "b": "m", "H": "m", "K": "unitless"},
+      "decimals": 3,
+      "standard_ref": "GB/T 50854-2024 相应章节【待核条款号】；放坡系数 K 由依据包注入",
+      "license_status": "TEST_ONLY",
+      "tests": [{"params": {"a": "10", "b": "8", "H": "2", "K": "0.33"}, "expect": "184.922"}]
+    }
+  ]
+}

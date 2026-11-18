@@ -1,0 +1,2526 @@
+{
+  "version": "4.3.0-development-review",
+  "production_accepted": false,
+  "accuracy_E": "BLOCKED",
+  "sources": [
+    {
+      "name": "TianxunBuddy_V4.2.6_Technical_Review.zip",
+      "role": "sanitized_baseline",
+      "sha256": "c346587c2ae5dd76b2c746b60ce931f8b1ec44b7c88d9aaba116aed36d24083a"
+    },
+    {
+      "name": "TianxunBuddy_V4.3.0_PRD_V2_Full_Upgrade(1).zip",
+      "role": "incoming_upgrade_delta",
+      "sha256": "cdb6b9502efe851870590fb67ff94170aa618d53c225df981ec4b86fcc8f3d42"
+    }
+  ],
+  "method": "Apply original-to-incoming hunks to sanitized baseline; retain prior exclusions and redactions.",
+  "changed_source_files": [
+    {
+      "path": "backend/txbuddy/api.py",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "f312916835e6f0516fedc25504bd28d21cda50a6fced5bfc6277c425f20c76ab",
+      "incoming_sha256": "2a17023c14913ccf297fdfdf197c2bcbd17fba71e6cd7904ab2de8a7732544f9",
+      "final_sha256": "c1f3da9e0814a7591a1946be13264d3027c2b239c1f74953629aef1b5a3f8909"
+    },
+    {
+      "path": "backend/txbuddy/prd_v2_extensions.py",
+      "strategy": "new_source",
+      "baseline_sha256": null,
+      "incoming_sha256": "6ff702d503bf646072c7a86a84f2a9224a263be002fc123414840c6788608a68",
+      "final_sha256": "6ff702d503bf646072c7a86a84f2a9224a263be002fc123414840c6788608a68"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "2731f134e8755a34bd05e5c20119c77325c77d4c67672179ee6b755e8ffe53be",
+      "incoming_sha256": "d850076e418fcdba5dbfd195daf068ed6552efb1258e7b0fb0fea1596f37d5c0",
+      "final_sha256": "b1dcbf8b13f29158317a19f7ff64264db8d36d6ec673060e093bab6438e843ae"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "c07601d2701c9a5d28a80fb6696ff209af073d627165858b7422f6378c6d4e45",
+      "incoming_sha256": "7e56e85e4f26b9f5779a8424119023340a68841e3c6a167f2936e8072e3144c8",
+      "final_sha256": "d416362ae13b95986a005874eec1523eaa08895adf250223f9ca2f27cb4bffe4"
+    },
+    {
+      "path": "frontend/src/endpoints.ts",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "fb6bd5b82cc4e53522596cc9c98da9885b3919b342501dca2fe5f63a54497026",
+      "incoming_sha256": "6b758f0db611355fffe5696eb602599343a64d68dd526ccbf4f972b2b8b0db92",
+      "final_sha256": "dd8de3f79fce3b731f053c538ef76eff2885c8df301dbccf1fa63b5acaccae0c"
+    },
+    {
+      "path": "frontend/src/pages/BidWorkbenchPage.vue",
+      "strategy": "new_source",
+      "baseline_sha256": null,
+      "incoming_sha256": "14e185e43f213b6dc45ed2515a6bd9366eedd3112f700564eacdf1050ee2be16",
+      "final_sha256": "14e185e43f213b6dc45ed2515a6bd9366eedd3112f700564eacdf1050ee2be16"
+    },
+    {
+      "path": "frontend/src/pages/CockpitPage.vue",
+      "strategy": "new_source",
+      "baseline_sha256": null,
+      "incoming_sha256": "64f043430fc3a6abdede51a57054d99a4a400b8da6f7039fbe8a85a8b41b48c8",
+      "final_sha256": "64f043430fc3a6abdede51a57054d99a4a400b8da6f7039fbe8a85a8b41b48c8"
+    },
+    {
+      "path": "frontend/src/pages/PricingPage.vue",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "ec7cf77d76029bb8d6672208860dbbf1bc7820fd2fb0e2dd5acca2233e10ca84",
+      "incoming_sha256": "41e98114cc3513d77c9fe0167bdb2f81a9b90110ffb551f91157e1a6f87e4dfb",
+      "final_sha256": "01f0d176ced7de3b179ae6f2a4336fa4efd6f32b24649dd7ed1c3f1c0f2cc4af"
+    },
+    {
+      "path": "frontend/src/pages/ProjectPage.vue",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "a147894e90eebacd500304496205019be194fb6ba2706bd92036263bc5bdb677",
+      "incoming_sha256": "4163e179abca03b0d41453cf54dfde439006214a5b4633051a9cba170c6cbb16",
+      "final_sha256": "4c8d5744eb11a4cacf03220ec2230673ffff2c8e1d5b7836fe8d436c787b995d"
+    },
+    {
+      "path": "frontend/src/pages/QuantityPage.vue",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "6126b70a74f62c3046d5a0f7ed37bce881d9d0de21dcedfbb4ad212c7986b6d5",
+      "incoming_sha256": "05aa4bbaceb4faa3483765b52a8b2bc866c33ddc360b2177224d72246d1a318d",
+      "final_sha256": "fcbaa42cd82e66fa08e4ec2dece7a1ad5c54f55d5ed21d9b63237fe0a98a5b0e"
+    },
+    {
+      "path": "frontend/src/pages/QuotaPage.vue",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "a2a7c49ef8bf0ff53241800db38d5346bf4aa65b8d1926b160233c550bf354e5",
+      "incoming_sha256": "7ceb9888d27ec7f33ae225836a293cfe5eb3ef7a3b14247e9d6d1608d7551df3",
+      "final_sha256": "dcc5549381a2b464c6e224d7aaf6696082407aaafdd299d95c32c75e9f21475e"
+    },
+    {
+      "path": "scripts/package_v426_manual.py",
+      "strategy": "delta_applied_to_sanitized_baseline",
+      "baseline_sha256": "25155ed25383ae296a1e0753b21c4bf7146f968c4979b458388389c430d0e135",
+      "incoming_sha256": "6a57b20b58ce18d4cb0536d99c8047fe9806677c98a9fe80a7f8ef8253d0f66a",
+      "final_sha256": "1927b4b60501c0be13fe1343aea27668d7bbe6cf2c27c02901d4c0f5b6ce939b"
+    },
+    {
+      "path": "sql/007_v427_prd_v2_completion.sql",
+      "strategy": "new_source",
+      "baseline_sha256": null,
+      "incoming_sha256": "3ec8bc85a9a3570d417d4a3457112e634e271906efe89ba823d5670de3b0732a",
+      "final_sha256": "3ec8bc85a9a3570d417d4a3457112e634e271906efe89ba823d5670de3b0732a"
+    },
+    {
+      "path": "frontend/package.json",
+      "strategy": "repository_version_metadata",
+      "baseline_sha256": "a65b0933530fbc2229caadabfe7aa55f0884d8bcc021694e5523fe164c7999a1",
+      "final_sha256": "afd23a6b9419e396b3fd7c2ed4ff9fc8a4307a7fdf3c7160cb33523f34f28e9c"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "strategy": "repository_version_metadata",
+      "baseline_sha256": "239dc9ca5d360c79333d818e53bf226e4630f949322d860b46cdfea37d5aac96",
+      "final_sha256": "87538b4ffcde4b84d602b90013c518c9c4000aadecf6417070d8be72b0b8cf37"
+    }
+  ],
+  "excluded_upgrade_files": [
+    {
+      "path": "scripts/package_v426.py",
+      "reason": "Preserved prior R2 private-corpus orchestration exclusion; not reintroduced."
+    }
+  ],
+  "preserved_redaction": {
+    "path": "backend/txbuddy/governance/catalog.py",
+    "sha256": "d321b6dd116277beceea4c20f7c43f2a260f4851fc0c69bbed60e88089eef5de"
+  },
+  "baseline_files": [
+    {
+      "path": "backend/data/README.md",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/data/README.md",
+      "sha256": "f4a35550fb45f0fb4a97e56b5ab708e0ea68a96107124fb601adf6e4d3a2dfef"
+    },
+    {
+      "path": "backend/data/demo_basis_pack.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/data/demo_basis_pack.json",
+      "sha256": "340566a5c82b98e02c3688e0910faac1668a65b2126dc48873494f528058cf77"
+    },
+    {
+      "path": "backend/data/rules_test_only.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/data/rules_test_only.json",
+      "sha256": "5e0630e6a5e0142d2eed515eccd67cc39e2246553b6134da39bf9f5de4aca2f3"
+    },
+    {
+      "path": "backend/scripts/idem_concurrency_evidence.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/scripts/idem_concurrency_evidence.py",
+      "sha256": "6cfb30a71a27e8c54bc3cc30d33fe642a5e0deff9e3fedd25cffbc4814270372"
+    },
+    {
+      "path": "backend/txbuddy/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/__init__.py",
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "backend/txbuddy/api.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/api.py",
+      "sha256": "f312916835e6f0516fedc25504bd28d21cda50a6fced5bfc6277c425f20c76ab"
+    },
+    {
+      "path": "backend/txbuddy/api_models.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/api_models.py",
+      "sha256": "58ca0f024767b9ae36b07942a2c275397249de873b8c76864f37e3b8b9dc6bc7"
+    },
+    {
+      "path": "backend/txbuddy/core/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "backend/txbuddy/core/admission.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/admission.py",
+      "sha256": "9124101a3a8059e9f21f0e82f16cb91c8433109b75ebe4458c76f26b670dee62"
+    },
+    {
+      "path": "backend/txbuddy/core/basis.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/basis.py",
+      "sha256": "c0dfa826d4a81b55de57f7fef554c65cd84264de9600fc3c68f55ec83a715faa"
+    },
+    {
+      "path": "backend/txbuddy/core/boq.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/boq.py",
+      "sha256": "46f8dd8478b386b02ecf42edbc997f3298466315382b4d3b5955deb740ed7006"
+    },
+    {
+      "path": "backend/txbuddy/core/calcrun.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/calcrun.py",
+      "sha256": "4e2964462e03cdc67f81cbf6c61f156fe38450e167431b1e34ac951b01f548c8"
+    },
+    {
+      "path": "backend/txbuddy/core/evidence.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/evidence.py",
+      "sha256": "6c5d537b796a6035b28c556c77a3c024e3a39e35c27388a305e36a3d70ea80d4"
+    },
+    {
+      "path": "backend/txbuddy/core/gates.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/gates.py",
+      "sha256": "ed4a8726345e1814747bf03b89a13fb8a995aebdd006851b6caef8b900cacb07"
+    },
+    {
+      "path": "backend/txbuddy/core/gates_service.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/gates_service.py",
+      "sha256": "56b1d6d03008c4ff60d88a4cfe86a3afe764274df6b09f8a3aca7c4bdcc97417"
+    },
+    {
+      "path": "backend/txbuddy/core/goldenset.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/goldenset.py",
+      "sha256": "c6a1cb8aeabb59772b546381b750f97acac2976eddb1543e8aff0a45282931dd"
+    },
+    {
+      "path": "backend/txbuddy/core/numeric.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/numeric.py",
+      "sha256": "400fafd4a2528ad296bde964efaedb17fc846831e208e791472f1ccab5cbb32f"
+    },
+    {
+      "path": "backend/txbuddy/core/precision.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/precision.py",
+      "sha256": "868984345cfb37b72e7e9e271d65b72cc7ec3fc1e41ccee60f027517ac02a7af"
+    },
+    {
+      "path": "backend/txbuddy/core/pricing.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/pricing.py",
+      "sha256": "801cc585d259c006e8abe1ebe78de6c1ffd8eb5917f3dc90919cc1a444dc2df6"
+    },
+    {
+      "path": "backend/txbuddy/core/quantity.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/quantity.py",
+      "sha256": "b04c0a0ec9bbbb83aa9f0da1ac70d2c929271f8bf1eb9bfed086d2fe5abc08a5"
+    },
+    {
+      "path": "backend/txbuddy/core/quota.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/quota.py",
+      "sha256": "44af6b685475377df0f130b1f4f49b9541fd073b49393d6d2c69dd5ce1108542"
+    },
+    {
+      "path": "backend/txbuddy/core/record_writer.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/record_writer.py",
+      "sha256": "542449aefd7b84b6dcc8b7ec9265f4c13df9bb4638fb2b9f253051d51805e3af"
+    },
+    {
+      "path": "backend/txbuddy/core/rules.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/rules.py",
+      "sha256": "4bced6a0d5c032fe0a002809ad4f6aa603cb92186015f0a9409ed24776dc5b19"
+    },
+    {
+      "path": "backend/txbuddy/core/workflow.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/workflow.py",
+      "sha256": "d9c6fc60fba2e6e8bae13612c78b460cdad05bf5837b0574eb3f3eb4fe9adf51"
+    },
+    {
+      "path": "backend/txbuddy/core/workflow_yaml.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/core/workflow_yaml.py",
+      "sha256": "c359367686ef4dda49082de2bb2664d4c2df1b4de9e22d4428ccbd3ec656999d"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/__init__.py",
+      "sha256": "09c8b0050fa8d7c3d43b1d9ece9e998e366827a691f5079e65c48ce3490131b6"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/common.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/common.py",
+      "sha256": "548ac792a3b653cfc8dd897f36c31ab2278344533e92e6d94c85dd47c665fa8d"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_budget.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/generators_budget.py",
+      "sha256": "6ef9e5a7860912148340feb3daf708614be080e53bb0be53d620d3ac10b2cea0"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_detail.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/generators_detail.py",
+      "sha256": "47e2be75f984ad831e9040e1d48b4b6ca75ff91b36091f7ec71aefc9c7cb3b3f"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_pricing.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/generators_pricing.py",
+      "sha256": "08204215e4459488a8ec93ab0a83b84e5b382269a6350c5ad6feac1f8e72eec4"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/model.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/model.py",
+      "sha256": "d1b43dbcdb3e8f1e016536e719ff4590ae62e8e32324e597bdffee70308502d7"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/pdf.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/pdf.py",
+      "sha256": "ecdb1fb4444d4d854e1f3b1144fb77fa0f879cc83e265866ac99b446743dc98c"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/service.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/service.py",
+      "sha256": "bfc4e23a7a5fe957550d2a77c6db03cbb4ec9485f0ed3f0f40c86ebd2e89d791"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/specs.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/specs.py",
+      "sha256": "dea395970359507e59dd01509ef32e00c2fc370d324e37a1d065fb4ef8b7c761"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/xlsx_util.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/deliverables/xlsx_util.py",
+      "sha256": "62ad86ff8113caba1ecad0b7337ec515d14ae37edea5595aefd0dea65a8ea1b4"
+    },
+    {
+      "path": "backend/txbuddy/governance/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/governance/__init__.py",
+      "sha256": "0107cf57d8bf382095d3318c5899ede7bff1e582168f86d037dbb5ee722f4152"
+    },
+    {
+      "path": "backend/txbuddy/governance/api.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/governance/api.py",
+      "sha256": "8848c3d912ee49b09666eb8924ba788686a4f383860f77c7131a2e756b6e2061"
+    },
+    {
+      "path": "backend/txbuddy/governance/catalog.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/governance/catalog.py",
+      "sha256": "d321b6dd116277beceea4c20f7c43f2a260f4851fc0c69bbed60e88089eef5de"
+    },
+    {
+      "path": "backend/txbuddy/governance/migration.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/governance/migration.py",
+      "sha256": "cd98118956112d27ccf996822f7131ec0c38c48091010ca10a55dce080f28aef"
+    },
+    {
+      "path": "backend/txbuddy/governance/ocr_review.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/governance/ocr_review.py",
+      "sha256": "b204590d4a53dfcb7f77ad6ef95e9776b9e6eda3e516cfdb13cc360459f34a3a"
+    },
+    {
+      "path": "backend/txbuddy/models.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/models.py",
+      "sha256": "126b2532a1ff6f047b6dc4faa4b4468869c0905381c5866eee958d9348a1a30c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/__init__.py",
+      "sha256": "36e0f976d66c9c3347e5a615fb205d95dee51bd09a54b32bf8abd26257453882"
+    },
+    {
+      "path": "backend/txbuddy/parsing/archive_adapter.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/archive_adapter.py",
+      "sha256": "73273dec46a5f2f81d5e491f1726488416c5d2cd645e3a384d6d0e8d1ef137f2"
+    },
+    {
+      "path": "backend/txbuddy/parsing/base.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/base.py",
+      "sha256": "0dd9db4f642d0fdcfa943c970eb48c124b8f2ce31bcf77f364911ea3a10a8c0d"
+    },
+    {
+      "path": "backend/txbuddy/parsing/doc_adapter.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/doc_adapter.py",
+      "sha256": "b7f839a9e4c0116da831fbc411023493e2664d0e8c38d58285623f77590a8973"
+    },
+    {
+      "path": "backend/txbuddy/parsing/docx_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/docx_parser.py",
+      "sha256": "bdb11f011117754c69c21f0820e14ad80b3aeefc68f66bffef44ad0d26dbc1b0"
+    },
+    {
+      "path": "backend/txbuddy/parsing/dwg_adapter.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/dwg_adapter.py",
+      "sha256": "d773c2eca8c44755628289984553e6ce426f304670077d08495a0132c2d095f7"
+    },
+    {
+      "path": "backend/txbuddy/parsing/dxf_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/dxf_parser.py",
+      "sha256": "790d3674fad868f3767ddf16567484c6d453ef10feb05f52b9651715596af67c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/html_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/html_parser.py",
+      "sha256": "9c717b0c1a9e2037aec6e7194ba199bee85f0319d4d67046a1b631bb7399513c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/member_worker.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/member_worker.py",
+      "sha256": "a9ad38a4011ce32d58e02d95f504410194f99a3f6bfee9924b74ce15783fd3e1"
+    },
+    {
+      "path": "backend/txbuddy/parsing/ocr.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/ocr.py",
+      "sha256": "f24d77bd9e819d3dfad381504b7d21d55362ac0ee3a50eefa4f8994076272dd4"
+    },
+    {
+      "path": "backend/txbuddy/parsing/pdf_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/pdf_parser.py",
+      "sha256": "8f60535b9e9068d61b7d23755ce911c72e7f2ba1a0f2edbd5e03fa5a23b7d5ca"
+    },
+    {
+      "path": "backend/txbuddy/parsing/process_limits.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/process_limits.py",
+      "sha256": "bcae14ba977a9a4086ede7770845380310430a8586772f8f512e0963fd155eeb"
+    },
+    {
+      "path": "backend/txbuddy/parsing/rar_metadata_worker.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/rar_metadata_worker.py",
+      "sha256": "794f5d402e00bf0d3e85e06d35a80b2b10b29264c957f238d1120d1c33d69e17"
+    },
+    {
+      "path": "backend/txbuddy/parsing/registry.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/registry.py",
+      "sha256": "837af16846dbfcad5e6a3f9381ced44e9b2247aecb788a4a0bdf6af44363a42e"
+    },
+    {
+      "path": "backend/txbuddy/parsing/text_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/text_parser.py",
+      "sha256": "a1160c1bb896391d4eb4f36037f115752c483e1d43b97ecfc6e98e9485442fca"
+    },
+    {
+      "path": "backend/txbuddy/parsing/xlsx_parser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/parsing/xlsx_parser.py",
+      "sha256": "462c1bc6af84c977c3adba05732c86bbcde8e35e1548f95dfde8b17c28ecba35"
+    },
+    {
+      "path": "backend/txbuddy/pilot/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/__init__.py",
+      "sha256": "4d45067d6693ee144b9dc3330a2ddfd0ecab5e18856bd26e5fca48d3ed881bcf"
+    },
+    {
+      "path": "backend/txbuddy/pilot/api.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/api.py",
+      "sha256": "4e342a4d98d4da4d8b0d86587603dee430864f0db0d648e98348c6ea001c416c"
+    },
+    {
+      "path": "backend/txbuddy/pilot/boq.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/boq.py",
+      "sha256": "979fdeeedb1b1d19ad00c8eb3a3458cd55cf6a738b46c2768b5b98d938f644de"
+    },
+    {
+      "path": "backend/txbuddy/pilot/database.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/database.py",
+      "sha256": "4f561b6da743ffa0bf246571057877138a6f85e1f1778ffcc74d230afdaaa224"
+    },
+    {
+      "path": "backend/txbuddy/pilot/extraction.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/extraction.py",
+      "sha256": "b226ab864e41ce9fa0855d76623ab8d0ce2900e593cf4d06eed428416ed507cf"
+    },
+    {
+      "path": "backend/txbuddy/pilot/importer.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/importer.py",
+      "sha256": "89b7a05e6d71d2e8e4940fe7b6d95568156c97e846a399d1e77fabb28779edeb"
+    },
+    {
+      "path": "backend/txbuddy/pilot/provenance.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/provenance.py",
+      "sha256": "b846c61a2bb432aeb0cb595ef6951dac31f4baf6a695d100ff4a0f1b8d21194c"
+    },
+    {
+      "path": "backend/txbuddy/pilot/service.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/pilot/service.py",
+      "sha256": "75db24209fe0e4304bb127f856ccf76f2d4559a62c385d9c20f1e2d98f7450c6"
+    },
+    {
+      "path": "backend/txbuddy/repository/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/__init__.py",
+      "sha256": "2bdfb22eca51465974476d78e47ec1c6a8e1bf202e914480abd3484b06ffd220"
+    },
+    {
+      "path": "backend/txbuddy/repository/base.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/base.py",
+      "sha256": "dd5ddc820d7e83235232e1dca2af1a6ef1399d7c2f935443ece6612b6ac1e3a5"
+    },
+    {
+      "path": "backend/txbuddy/repository/migrations.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/migrations.py",
+      "sha256": "74f59610bbdf9350e33532fa5c0b5e532a7625760bd719c93fcf9df271fc164f"
+    },
+    {
+      "path": "backend/txbuddy/repository/pg.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/pg.py",
+      "sha256": "6a89776976f55c85f1f8637709d5adc39fc9f60e7e89343d80ab2fd46281ef57"
+    },
+    {
+      "path": "backend/txbuddy/repository/schema.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/schema.py",
+      "sha256": "16683147213622f320bb2e8b8a7541498c5c4aee11e054b1afb371d55f8dd442"
+    },
+    {
+      "path": "backend/txbuddy/repository/sqlite.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/sqlite.py",
+      "sha256": "edd5cd848d271985200aaf3be32a45ffbfca3f7295a47fb4dc5a1acb6c5ec9bb"
+    },
+    {
+      "path": "backend/txbuddy/repository/unit_of_work.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/repository/unit_of_work.py",
+      "sha256": "b814e62a49e524ed8ca5aa80095d887d3fe53944ccc406c3edc606f548dd7290"
+    },
+    {
+      "path": "backend/txbuddy/security/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/__init__.py",
+      "sha256": "77ce2c716643c0938ff20a0a67d5e5a36a4bbf8ae1fa46a8b0a1ed66863ee52a"
+    },
+    {
+      "path": "backend/txbuddy/security/acl.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/acl.py",
+      "sha256": "c87c8cf494cc40cfa647d37315c12a303d71c9788474dedbea83d26c0615adc4"
+    },
+    {
+      "path": "backend/txbuddy/security/acl_routes.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/acl_routes.py",
+      "sha256": "be129a92efcc45837799d9bc4f3f7371df910b649e49ba410d7af5660bc22e8c"
+    },
+    {
+      "path": "backend/txbuddy/security/app.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/app.py",
+      "sha256": "16cf46994fcae657edcb0da6a49aefe36db5437818706223439c70a0d2e1a632"
+    },
+    {
+      "path": "backend/txbuddy/security/context.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/context.py",
+      "sha256": "52c5f24ff57a7af0170f8ecb6760a898b4f1023fc7bc25fc98b5ba4197f8c5db"
+    },
+    {
+      "path": "backend/txbuddy/security/deps.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/deps.py",
+      "sha256": "e45d30df30314889f9c91521c9f9f5b88ebd24a12bdb365932fd58987bc21ccb"
+    },
+    {
+      "path": "backend/txbuddy/security/files.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/files.py",
+      "sha256": "fd47f3cfe05db7ee2f10d8328d4e93894d5fc59c929e4c347f880000bddc449e"
+    },
+    {
+      "path": "backend/txbuddy/security/routes.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/routes.py",
+      "sha256": "15286441b30263a56223a31334a556f6c233393c0fec5add5a26994e6c2d1322"
+    },
+    {
+      "path": "backend/txbuddy/security/runtime.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/runtime.py",
+      "sha256": "677010ef6131875d95b3f333b16341c93428abcd926cda34e83bf03902eacce2"
+    },
+    {
+      "path": "backend/txbuddy/security/tokens.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/tokens.py",
+      "sha256": "d834dd85b34cdac5e865b1dc2469ce2cadb3c6211fd2e6b192c422fedb824c65"
+    },
+    {
+      "path": "backend/txbuddy/security/users.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/security/users.py",
+      "sha256": "04abeae785ecfec51b814b1cab30d0c83152385f7c508b02ee6472eb40c8a208"
+    },
+    {
+      "path": "backend/txbuddy/storage/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/storage/__init__.py",
+      "sha256": "2cb4b2abd8a05e66df60e6fd9330522d5a5ecf39cf2470357ef799a76e1886bd"
+    },
+    {
+      "path": "backend/txbuddy/storage/filestore.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/storage/filestore.py",
+      "sha256": "876d3ed68ccd57fe8ab275ab65ef2b7dc2067afbe1fc03f20674f9424ef67082"
+    },
+    {
+      "path": "backend/txbuddy/store.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/backend/txbuddy/store.py",
+      "sha256": "88cc99aedfdade38f35f2e45e43e5e0fd359612aca94e1a0fc66c548d7456145"
+    },
+    {
+      "path": "frontend/e2e/auth-ui.spec.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/auth-ui.spec.ts",
+      "sha256": "a6d92394a238340be1acdaa06218662c43a8d82b5bee7070d8b6dc9f5c697a95"
+    },
+    {
+      "path": "frontend/e2e/governance.spec.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/governance.spec.ts",
+      "sha256": "96de527e8037bed23ceb0bccb9a8fb79a26c656401da58f1293ed0abe67dc941"
+    },
+    {
+      "path": "frontend/e2e/manual-observer.mjs",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/manual-observer.mjs",
+      "sha256": "ab84c1715e5fc20356aba4273739bc6733ccf8ede316883af8f0c24c4c81bfc8"
+    },
+    {
+      "path": "frontend/e2e/ocr-roles.spec.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/ocr-roles.spec.ts",
+      "sha256": "7eb29abd92b85ab02950198ce067d21a80d3f96dc0456ca820213efa7cd5aef6"
+    },
+    {
+      "path": "frontend/e2e/server-v425.mjs",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/server-v425.mjs",
+      "sha256": "2abeaa843ba46c9ced31416b5c3c78d965c6a77d134f920d86c87554799ab544"
+    },
+    {
+      "path": "frontend/e2e/server.mjs",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/e2e/server.mjs",
+      "sha256": "f5390696e6a51cb811d1b0dd42a3af232660db5dbaa693b042f92343df801e82"
+    },
+    {
+      "path": "frontend/env.d.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "frontend/index.html",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/index.html",
+      "sha256": "3331918d2ddaae2504fa7d72cc2597e3eaa7b5356fd9444a401b890f7e39342b"
+    },
+    {
+      "path": "frontend/manual-e2e/workbench.spec.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/manual-e2e/workbench.spec.ts",
+      "sha256": "37e9e358cd823f41e5812c95dc60fbf3294d854ce2117388135d089e2a58db53"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/package-lock.json",
+      "sha256": "239dc9ca5d360c79333d818e53bf226e4630f949322d860b46cdfea37d5aac96"
+    },
+    {
+      "path": "frontend/package.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/package.json",
+      "sha256": "a65b0933530fbc2229caadabfe7aa55f0884d8bcc021694e5523fe164c7999a1"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/playwright.config.ts",
+      "sha256": "af1c1b421208faea5b3dce3aa0b387b07cd5b877dc315e7bc0502a33a728caf4"
+    },
+    {
+      "path": "frontend/playwright.manual.config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/playwright.manual.config.ts",
+      "sha256": "101144b5c2918dfd1853414af93eadae34ea0f674e9b82f0526b00990d6c07df"
+    },
+    {
+      "path": "frontend/playwright.shell.config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/playwright.shell.config.ts",
+      "sha256": "e283c3710055e9d9a6b5f32779ca969b70334d15dc9fa0a34a83f7cd77dba55f"
+    },
+    {
+      "path": "frontend/playwright.v425.config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/playwright.v425.config.ts",
+      "sha256": "1703ab27bb77185fae670e05af393d53c9c5bd32a853c055de8edb66fad08fa9"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/App.vue",
+      "sha256": "c07601d2701c9a5d28a80fb6696ff209af073d627165858b7422f6378c6d4e45"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/api.ts",
+      "sha256": "2731f134e8755a34bd05e5c20119c77325c77d4c67672179ee6b755e8ffe53be"
+    },
+    {
+      "path": "frontend/src/auth.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/auth.ts",
+      "sha256": "6a04af7552f2e056f2cd578495e8913a4082dcbe8685d7c9de32911a967be698"
+    },
+    {
+      "path": "frontend/src/components/EndpointPanel.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/components/EndpointPanel.vue",
+      "sha256": "26e5ca372447b847aba2d84eaf6f663623b618ee255db93691a9f0ce5e8a758f"
+    },
+    {
+      "path": "frontend/src/components/JsonField.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/components/JsonField.vue",
+      "sha256": "38fa9a2b35b7a2a3ff9e1542e390eead365844259f925a91d22fdc804c4435b3"
+    },
+    {
+      "path": "frontend/src/components/LoginPanel.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/components/LoginPanel.vue",
+      "sha256": "f2a212f54c4dbdfd7d4806fab4032cbebf149c70653f5475310d7460cf571f01"
+    },
+    {
+      "path": "frontend/src/components/PageHeader.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/components/PageHeader.vue",
+      "sha256": "db484356d8cd670d92f17ddc14abd8f062e6b37e3844fb0c77cb2218d6da5818"
+    },
+    {
+      "path": "frontend/src/components/ResultPanel.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/components/ResultPanel.vue",
+      "sha256": "fa8ec3dd5c5e5a2b83dc210efbbc0186fcfd1c3bb662958d310b8ec646761f1a"
+    },
+    {
+      "path": "frontend/src/config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/config.ts",
+      "sha256": "7f4940361da476c559b8cc4bd2a8a8c6ec08c4463628307d9e1352f1011e72f5"
+    },
+    {
+      "path": "frontend/src/diagnostics.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/diagnostics.ts",
+      "sha256": "0e5463d80238da0399ff1f785c01651d371d3da1a4a270bdd3f0baeb44881f4f"
+    },
+    {
+      "path": "frontend/src/endpoints.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/endpoints.ts",
+      "sha256": "fb6bd5b82cc4e53522596cc9c98da9885b3919b342501dca2fe5f63a54497026"
+    },
+    {
+      "path": "frontend/src/governance.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/governance.ts",
+      "sha256": "fbbb02ac897f38d99645d6ef17847f9fe3929f68b1b6597c59ebea5253c9f1d7"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/main.ts",
+      "sha256": "94b703fafecdc89fecf5dea411938d3854d191d3eed8314265a16ce53dfe84b3"
+    },
+    {
+      "path": "frontend/src/pages/BoqPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/BoqPage.vue",
+      "sha256": "dc9844040033039d667b24dbf2903e30e3e8b0f6a1c642d26cd6bb384540142c"
+    },
+    {
+      "path": "frontend/src/pages/DeliverablePage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/DeliverablePage.vue",
+      "sha256": "ed0732a613ff345ced952e442cd7f857fb4007b84d5f54a939819df5bfa9b6cb"
+    },
+    {
+      "path": "frontend/src/pages/DocumentsPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/DocumentsPage.vue",
+      "sha256": "64d9e01717b9a38e751c7fcb38b6bae5e102d650352c2db9f2f927c6e1ce9c21"
+    },
+    {
+      "path": "frontend/src/pages/EvidencePage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/EvidencePage.vue",
+      "sha256": "1bbb62d820ff8e4fe75fca69ba10bb574165e1463a7a5513bb008e869c08e645"
+    },
+    {
+      "path": "frontend/src/pages/OcrReviewPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/OcrReviewPage.vue",
+      "sha256": "bddb3f677feff5d256449a0d02014dc0bda66c43cb5b725436676dd9351e491e"
+    },
+    {
+      "path": "frontend/src/pages/PricingPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/PricingPage.vue",
+      "sha256": "ec7cf77d76029bb8d6672208860dbbf1bc7820fd2fb0e2dd5acca2233e10ca84"
+    },
+    {
+      "path": "frontend/src/pages/ProjectPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/ProjectPage.vue",
+      "sha256": "a147894e90eebacd500304496205019be194fb6ba2706bd92036263bc5bdb677"
+    },
+    {
+      "path": "frontend/src/pages/ProjectReadinessPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/ProjectReadinessPage.vue",
+      "sha256": "adc0b195f74ca33127b7ff8134830b69e53465440536af23ea594e2b3a8605b8"
+    },
+    {
+      "path": "frontend/src/pages/QuantityPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/QuantityPage.vue",
+      "sha256": "6126b70a74f62c3046d5a0f7ed37bce881d9d0de21dcedfbb4ad212c7986b6d5"
+    },
+    {
+      "path": "frontend/src/pages/QuotaPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/QuotaPage.vue",
+      "sha256": "a2a7c49ef8bf0ff53241800db38d5346bf4aa65b8d1926b160233c550bf354e5"
+    },
+    {
+      "path": "frontend/src/pages/ReviewPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/ReviewPage.vue",
+      "sha256": "51181c98319badd3c023b3586c25ff796b215cee7ab08afc91b78074f0efa69e"
+    },
+    {
+      "path": "frontend/src/pages/SamplePilotPage.vue",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/pages/SamplePilotPage.vue",
+      "sha256": "09ad4662068d11b33d9f98e355b487c66643a1122c515b18ca155216af5bae36"
+    },
+    {
+      "path": "frontend/src/session.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/session.ts",
+      "sha256": "18550503528a0e1cda3495f4ee7f7c636b3cdb16110bf75eaf7e2e2b067589da"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/styles.css",
+      "sha256": "f0063def3ad66ea53a4f8fad6000042cf5022c6096eb7db0941b71613eaecb7f"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/types.ts",
+      "sha256": "4855bff1f220a1d4f0ef9798ccb2f5c953ff2e2a0b30c958eea1f8909e74a685"
+    },
+    {
+      "path": "frontend/src/useApi.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/src/useApi.ts",
+      "sha256": "522b4620cfd1c2eb0b87d096b8852c24afe02d8df1c16236b15e9c4ce0a404a7"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/tsconfig.json",
+      "sha256": "3fbba6f6d6b80a49a2e8870fef9202e43e9fc271ef4bf5b5908e8efabc5e8fd6"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/frontend/vite.config.ts",
+      "sha256": "457ab3659f14f18848eee5e51d0761f10d728ffe8566bfe6de6157578c4481e8"
+    },
+    {
+      "path": "scripts/V426_TASK_QUEUE.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/V426_TASK_QUEUE.json",
+      "sha256": "f062afd4a1306132030297ed87ed38b982ee36baa7453f893f32ff4efa9189a8"
+    },
+    {
+      "path": "scripts/package_v424.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/package_v424.py",
+      "sha256": "f9fe3bde7891fc92922296ef5e5c5b7f55c77cf0c6850c2c503ca05941924072"
+    },
+    {
+      "path": "scripts/package_v425.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/package_v425.py",
+      "sha256": "768b4ee92c8027b7d5602c0fb400970676e6c390dae6327613e4eab67ea06436"
+    },
+    {
+      "path": "scripts/package_v426_manual.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/package_v426_manual.py",
+      "sha256": "25155ed25383ae296a1e0753b21c4bf7146f968c4979b458388389c430d0e135"
+    },
+    {
+      "path": "scripts/v426_manual_browser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/v426_manual_browser.py",
+      "sha256": "968bace4cb45b2349bd98e891514b50a8ab203bd8f19491e604ae76196657b44"
+    },
+    {
+      "path": "scripts/v426_manual_legacy_browser.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/v426_manual_legacy_browser.py",
+      "sha256": "d4bf3aeeadd8369ab19147d16294e4bddaf894be831bb0d9d3f4a43b0b154ffd"
+    },
+    {
+      "path": "scripts/v426_manual_regression.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/v426_manual_regression.py",
+      "sha256": "d49fce1d382d2eb943c999297c378abde65b43326b790220b8ad4e6ae638cfa9"
+    },
+    {
+      "path": "scripts/v426_manual_runtime.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/v426_manual_runtime.py",
+      "sha256": "4eb14f150a141bba8e6e26a1be97bd2605dcaa220f79ccdd17c8475689ff3496"
+    },
+    {
+      "path": "scripts/v426_package_verify.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/scripts/v426_package_verify.py",
+      "sha256": "70bb40144df5a6206aba21ed7a20ed78d928b40a69d8348a3aeac1324f45e8ba"
+    },
+    {
+      "path": "sql/001_core_schema_postgresql.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/001_core_schema_postgresql.sql",
+      "sha256": "ac9b5acdb49b1d02bae25c3d75c787d061510207ecf4eefadfa7eb767602fede"
+    },
+    {
+      "path": "sql/002_workflow_and_idem_postgresql.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/002_workflow_and_idem_postgresql.sql",
+      "sha256": "5989cf9e4207d83541bb93456c20cdf0e2edda75123188d1182f305becd58030"
+    },
+    {
+      "path": "sql/003_repository_runtime_postgresql.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/003_repository_runtime_postgresql.sql",
+      "sha256": "8120fee4582a8e673a9945e842f6c2e26518815bae833f41d05718286dccec6b"
+    },
+    {
+      "path": "sql/004_sample_pilot.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/004_sample_pilot.sql",
+      "sha256": "ce0fcec706b2be3387d891841c599ee1a35e1e21578a26aa8a1be30ab555880b"
+    },
+    {
+      "path": "sql/005_v425_unification_poc.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/005_v425_unification_poc.sql",
+      "sha256": "8c24e85a2407c9cfa0fdbe8363863333182433e6d913282c073d19cfe0132df6"
+    },
+    {
+      "path": "sql/006_v426_ocr_audit_poc.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/006_v426_ocr_audit_poc.sql",
+      "sha256": "3a849eac7f7d1a43912a063b798c1e22b17bc4a56b1427d2c7a90a0ea6177ab9"
+    },
+    {
+      "path": "sql/migrations/README.md",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/README.md",
+      "sha256": "b86fd349189d27250159f385067f137dc27f7204f576e5f5366c1a96fd7ca0d0"
+    },
+    {
+      "path": "sql/migrations/postgresql/R001__core_schema.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/postgresql/R001__core_schema.sql",
+      "sha256": "b6a0d2f69159f4eaeccd9f5cf59243ca89cd50304cc113cb5441ab3337ff4d67"
+    },
+    {
+      "path": "sql/migrations/postgresql/R002__workflow_and_idem.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/postgresql/R002__workflow_and_idem.sql",
+      "sha256": "3b65aad3f003a54219c26f3dacc250cce6b3e910213f099f49ad7a1f7a14f394"
+    },
+    {
+      "path": "sql/migrations/postgresql/R003__repository_runtime.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/postgresql/R003__repository_runtime.sql",
+      "sha256": "1d5e258c99221ae9725d494468b6347a6a533c11da6e5cdd18b9a9f0009ef077"
+    },
+    {
+      "path": "sql/migrations/sqlite/R001__core_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/R001__core_tables.sql",
+      "sha256": "d7dae8e1e16d85cecb5ccd6ad725d814a77cae1b93c84909eec19a144b22848f"
+    },
+    {
+      "path": "sql/migrations/sqlite/R002__workflow_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/R002__workflow_tables.sql",
+      "sha256": "7df7d621f4bed49bb344185c48ecd9634ad6c4ec4e50a3e91dc415ca281fcf2c"
+    },
+    {
+      "path": "sql/migrations/sqlite/R003__record_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/R003__record_tables.sql",
+      "sha256": "01fcb799f3bf111d4ccbcb50aaccee66f13b6b214f54b858b9623f3d49aed4f3"
+    },
+    {
+      "path": "sql/migrations/sqlite/V001__core_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/V001__core_tables.sql",
+      "sha256": "8cc37bc749b21a96c0e5e52063e079f3518a688010e5a6600ab6bbcde74fda9c"
+    },
+    {
+      "path": "sql/migrations/sqlite/V002__workflow_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/V002__workflow_tables.sql",
+      "sha256": "cfacc8fd61617cd95ee82599cd508ac987b257440b5af2aca4da9096db968648"
+    },
+    {
+      "path": "sql/migrations/sqlite/V003__record_tables.sql",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/01_SOURCE/sql/migrations/sqlite/V003__record_tables.sql",
+      "sha256": "7f212e0d310b543932affb5dcd771fd77c8b3bc5089015e1abbf75c654ade02b"
+    },
+    {
+      "path": "schemas/appraisal_intake.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/appraisal_intake.schema.json",
+      "sha256": "cd75f72c24dec8bbb98ffc56232acb40b7f65fe0047b563fde13083520f7a2e4"
+    },
+    {
+      "path": "schemas/budget_submission.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/budget_submission.schema.json",
+      "sha256": "090ffb7f3b66495eaf517731852c92316a89feac8f3096af299ed03e5ccbb202"
+    },
+    {
+      "path": "schemas/change_visa.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/change_visa.schema.json",
+      "sha256": "ca4c09bab72f76dfdedf1ce4f4bb38577c1e3c15a8e7d2c673e38f1d727a7d70"
+    },
+    {
+      "path": "schemas/contract.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/contract.schema.json",
+      "sha256": "c4d0bafaeff894ea8da58e723321cde13d9cb837796a0906b01b5b45ac67b2d1"
+    },
+    {
+      "path": "schemas/drawing_index.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/drawing_index.schema.json",
+      "sha256": "da0b9b36276dc3c81006005e365a296f5453f0991b7d8dd69b7af3035641be2d"
+    },
+    {
+      "path": "schemas/measurement_payment.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/measurement_payment.schema.json",
+      "sha256": "2a4b72bee2365d4c5f95bb86648fb9c664be8fc3067b95f50542ffaafd40c0a9"
+    },
+    {
+      "path": "schemas/settlement_submission.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/settlement_submission.schema.json",
+      "sha256": "52b1c1c6851f51683c665a0e85748826381be3ee08cd82e81c95737ae265d9a2"
+    },
+    {
+      "path": "schemas/tender_doc.schema.json",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/schemas/tender_doc.schema.json",
+      "sha256": "0f1e11f75da6e686640142d1f4e304e60196c66cc8c7c4f57b98690103d8b2fa"
+    },
+    {
+      "path": "workflows/L1_budget_compilation.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L1_budget_compilation.yaml",
+      "sha256": "731e52a4ad83fb38e4267878a1b2cbba1ffa2c4890310b067a208547ef5d538b"
+    },
+    {
+      "path": "workflows/L2_budget_review.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L2_budget_review.yaml",
+      "sha256": "2ceed92dbb231ee3df54405b9a264c06d049a176a0976f2dabde876c3915e78e"
+    },
+    {
+      "path": "workflows/L3_settlement_compilation.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L3_settlement_compilation.yaml",
+      "sha256": "cdd22994da95eeadaeb5fb11db82881db9b28bce8a5570c2be136bf00ceefe5d"
+    },
+    {
+      "path": "workflows/L4_settlement_review.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L4_settlement_review.yaml",
+      "sha256": "d853cde71be6b4915041f64ced2eeef4d3d586e61222606ce338f9e1fc069a6a"
+    },
+    {
+      "path": "workflows/L5_tender_bid.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L5_tender_bid.yaml",
+      "sha256": "b447ebf0909efdbb8e26071c4e63662e54b531109eddd9eea3ff2a745795fa2c"
+    },
+    {
+      "path": "workflows/L6_appraisal_shadow.yaml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/02_CONTRACTS/workflows/L6_appraisal_shadow.yaml",
+      "sha256": "ca2a2bce7f781de5d816a36171e011ac53296a980eedf11d42e975f8cb695e3d"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/tests/authenticated_client.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/authenticated_client.py",
+      "sha256": "960026751d5bf2017f87bc4c89ac58501a1ace0b54bfc1847cfed36bf13f2311"
+    },
+    {
+      "path": "backend/tests/test_api_v41.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_api_v41.py",
+      "sha256": "e1dfc0ce0abf951a82ac35ecc51f5d38dd9526ce713a94cbfaf3c871c562946d"
+    },
+    {
+      "path": "backend/tests/test_boq.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_boq.py",
+      "sha256": "8058b9745321071a074ad197f7e5517f0513c3f32a6d4209141c15bbd68593a1"
+    },
+    {
+      "path": "backend/tests/test_calcrun.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_calcrun.py",
+      "sha256": "e94508b9f72bec13e0390023603b65812a0cb008c79514a163959d6a0472561d"
+    },
+    {
+      "path": "backend/tests/test_core.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_core.py",
+      "sha256": "821cb7515c7f801df175409721daea43d34948ab8a414b46caa11efa3649f05c"
+    },
+    {
+      "path": "backend/tests/test_gates_v41.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_gates_v41.py",
+      "sha256": "7530a70a4f1d8579f0b7e9003875c33aac2d85215fbc019ad52bf40222b39507"
+    },
+    {
+      "path": "backend/tests/test_l1_integration.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_l1_integration.py",
+      "sha256": "453c630225e7db1d0f4a09763971b490c16d4a8cb9906ece32938673305228d6"
+    },
+    {
+      "path": "backend/tests/test_p0_04_gate_binding.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_p0_04_gate_binding.py",
+      "sha256": "1540043904741439475f95b9c92a5c0aba863bded4e67f07f1dd379b75441977"
+    },
+    {
+      "path": "backend/tests/test_p0_repro.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_p0_repro.py",
+      "sha256": "40aadae281b2cd2480b78788a713b373ce21135ea7babfe02d146175c4081dea"
+    },
+    {
+      "path": "backend/tests/test_pg_integration.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_pg_integration.py",
+      "sha256": "5ea70beac344e2ab59c62eb8ac50963bc78d9b7acdc51964ebd97819b2f00710"
+    },
+    {
+      "path": "backend/tests/test_rules.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_rules.py",
+      "sha256": "c34301631d8448640186a917042364a4a2df58c12dc619f8ca9c9effd473fd71"
+    },
+    {
+      "path": "backend/tests/test_v24_acl_wire.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_acl_wire.py",
+      "sha256": "b461a0cfcbb79738443e2ef3bd69e2595f2f3d7b3a629d6bae5a76b73a7507eb"
+    },
+    {
+      "path": "backend/tests/test_v24_api_auth.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_api_auth.py",
+      "sha256": "0d53aa9b4e428bc283f434a819c1ba312b1004d80f176ebb4d304b5546117c7e"
+    },
+    {
+      "path": "backend/tests/test_v24_corpus_bind.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_corpus_bind.py",
+      "sha256": "d5773e210bf8cbb731d5e724591afea27ed92347d9e333bc708ee700673fee12"
+    },
+    {
+      "path": "backend/tests/test_v24_deliver_api.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_deliver_api.py",
+      "sha256": "21fba1891abb10652fce7ad59fdfc36c3cb1cbe213f76f081da7e2d7fdcdcc04"
+    },
+    {
+      "path": "backend/tests/test_v24_endpoint_mapping.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_endpoint_mapping.py",
+      "sha256": "ad1e396470fb13ae9444fc0082616f2ff1f72445dee1fdc417818445946b9d0e"
+    },
+    {
+      "path": "backend/tests/test_v24_files_upload.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_files_upload.py",
+      "sha256": "e37fe0dfbd8b31dc4aff91e1a52a91082a0459f3578a5692eb68d16bc0c40aeb"
+    },
+    {
+      "path": "backend/tests/test_v24_goldenset.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_goldenset.py",
+      "sha256": "33e1dd17e444775a7b98e4a8a9d0033aa6ac01c2afdfdb7c7d241b54930b64c9"
+    },
+    {
+      "path": "backend/tests/test_v24_html_parse.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_html_parse.py",
+      "sha256": "1c1376faa9965b2890d90f7d9e07e2c7a72014492123ddb410d24da1e7d47dd9"
+    },
+    {
+      "path": "backend/tests/test_v24_internal_token.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_internal_token.py",
+      "sha256": "3129c7fac9f546012a21f042f55002da840a4eb718100ca0ea8262680294b4f6"
+    },
+    {
+      "path": "backend/tests/test_v24_jobs_list.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_jobs_list.py",
+      "sha256": "d80169e2751772db1f428499ff34f60314ee6732dce8f4035fbe93041251393f"
+    },
+    {
+      "path": "backend/tests/test_v24_ocr_path.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_ocr_path.py",
+      "sha256": "2b166b592fbb209c1a791298ab4a151c3436e01c3259955a9360620dffdeb581"
+    },
+    {
+      "path": "backend/tests/test_v24_package_safety.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_package_safety.py",
+      "sha256": "91c6ccc481d7d2fe68c680847e7c7603b08e7e8e5bcd97e24aef748a798ce309"
+    },
+    {
+      "path": "backend/tests/test_v24_parse_api.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_parse_api.py",
+      "sha256": "e9ce9bbdbe3ae0c2935f85fd3d4f1a0865ba5d26f8cf1fed64e8d06aebc62a3c"
+    },
+    {
+      "path": "backend/tests/test_v24_quota_lib.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_quota_lib.py",
+      "sha256": "f814ffc35050ac66724133e7e8aaac89c4f96906191ca7daec86f6ccbb4fba89"
+    },
+    {
+      "path": "backend/tests/test_v24_real_l1.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_real_l1.py",
+      "sha256": "2352a26a653b4b6bd010fd9a15fa67a77fc38fd3abe91f70f1cb549b0232dfe9"
+    },
+    {
+      "path": "backend/tests/test_v24_xlsx_structure.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v24_xlsx_structure.py",
+      "sha256": "4bb3b372d5acc9b4cf1e4ffe27bfa0d6fd3df6758ed8c7d2c8d1a24f130e2d92"
+    },
+    {
+      "path": "backend/tests/test_v421_hardening.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v421_hardening.py",
+      "sha256": "7b7a8f5e2c4151241ce455ffcace44f2706318b49f18d3de6bbf9c26e1e16f1f"
+    },
+    {
+      "path": "backend/tests/test_v423_acl.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_acl.py",
+      "sha256": "ffe83f3631023621a0dcb1591775f45a2193a12a73aa7a62096c5610cd29f1ab"
+    },
+    {
+      "path": "backend/tests/test_v423_admission_uniform.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_admission_uniform.py",
+      "sha256": "52ee1c0eda743383601c846af080e354241007a7f5add73a81a72e8a13981ec4"
+    },
+    {
+      "path": "backend/tests/test_v423_auth.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_auth.py",
+      "sha256": "7bc537ab88e8bbdffa97cb193d9e3d7f7e47f92a566cb8a6d32b80521a4f3ba1"
+    },
+    {
+      "path": "backend/tests/test_v423_deliverables.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_deliverables.py",
+      "sha256": "a1bf779371b21e1305aa5052dd32bb9d555bf766e8841f7b763a1f1bb5801deb"
+    },
+    {
+      "path": "backend/tests/test_v423_e2e.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_e2e.py",
+      "sha256": "a09eb3fb3c158a19cb4b755082a33cde382cb672963c28ef2767aa8cb9421413"
+    },
+    {
+      "path": "backend/tests/test_v423_evidence_binding.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_evidence_binding.py",
+      "sha256": "32c35496882e753e6ab69c2bc755b519e2d50f787ced58288ff142251e845777"
+    },
+    {
+      "path": "backend/tests/test_v423_filestore.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_filestore.py",
+      "sha256": "17a6f292f9d2f153116e83ab23f05a5e7454e158cc94cc26d6830a64cf7650dd"
+    },
+    {
+      "path": "backend/tests/test_v423_gates_authority.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_gates_authority.py",
+      "sha256": "93929bb5ae93d29970445d06d23550b9fe958bc28de3b2cec55a913b027a3580"
+    },
+    {
+      "path": "backend/tests/test_v423_idem_semantics.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_idem_semantics.py",
+      "sha256": "57655d8bd6a0fdd60c3d10ebbaf4673440a73d3066a585099dd8df88e0dfcc7f"
+    },
+    {
+      "path": "backend/tests/test_v423_jgates.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_jgates.py",
+      "sha256": "6a1702ff70089c2ee0499b05b39cf8e83b428975e67aa514910456c2ecb46d5e"
+    },
+    {
+      "path": "backend/tests/test_v423_job_model.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_job_model.py",
+      "sha256": "e81edae292b4adbc815f0569448f4b75ecba6550b497a4341da817b450e41ba3"
+    },
+    {
+      "path": "backend/tests/test_v423_l1_yaml.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_l1_yaml.py",
+      "sha256": "ddd82600df790c98a297960a604a7d1d4e6928329835cadf1dca3bf278c7253c"
+    },
+    {
+      "path": "backend/tests/test_v423_migration.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_migration.py",
+      "sha256": "3823ccd9021a45414f76b9d8816668e4831441ca9a1169e364d1d05b0dcb130b"
+    },
+    {
+      "path": "backend/tests/test_v423_numeric_all_engines.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_numeric_all_engines.py",
+      "sha256": "35f9fd125710393b2cb440bf4d0c5e59fefafed2a0f57e158169579e094409bd"
+    },
+    {
+      "path": "backend/tests/test_v423_parsing.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_parsing.py",
+      "sha256": "63fc997adfa1c1b2577d52c10e5fec3f394c94941c6c2007259611ca811bd92f"
+    },
+    {
+      "path": "backend/tests/test_v423_pg_repository.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_pg_repository.py",
+      "sha256": "d7301a1e9f8cfb00b070832f36aac778ab008a0d54c6a55e2c6fb933180d071e"
+    },
+    {
+      "path": "backend/tests/test_v423_recalc.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_recalc.py",
+      "sha256": "829756d8e81ead2d80ee58f7228914799c76d99d00c98cfe335cc3a5c62d6f6b"
+    },
+    {
+      "path": "backend/tests/test_v423_sqlite_repository.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_sqlite_repository.py",
+      "sha256": "f97ca17af95c1630e2099d0b99b65d55f18170de0109eb7430db91df8ba2ac89"
+    },
+    {
+      "path": "backend/tests/test_v423_tx_recovery.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v423_tx_recovery.py",
+      "sha256": "19cd9a42dd83fe176e908b037ff51d7faecb5877714a974e2cc82ab602176f4b"
+    },
+    {
+      "path": "backend/tests/test_v425_catalog.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v425_catalog.py",
+      "sha256": "50c09ab104932e704e527cb6ad5680bf01ea124ed1abae8fbebf4fb09cea1814"
+    },
+    {
+      "path": "backend/tests/test_v425_file_parsers.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v425_file_parsers.py",
+      "sha256": "9c0a4ef503b5c89cc7d9efa0c2e6150a21924bb20d4d58268fe6499080b68f02"
+    },
+    {
+      "path": "backend/tests/test_v425_legacy_source_acl.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v425_legacy_source_acl.py",
+      "sha256": "261dc27cb4fd2a34d13fdf710b9071f0f6b7f03833733576fe877649391218ee"
+    },
+    {
+      "path": "backend/tests/test_v425_migration.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v425_migration.py",
+      "sha256": "baba353cf509b7b85934b40f2a301101e73eef2f830ab9fd10f7374d31f76da8"
+    },
+    {
+      "path": "backend/tests/test_v425_ocr_review.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v425_ocr_review.py",
+      "sha256": "5af3c1ab6fc5ce80d9c20de9ae0bb82b3844ae470bc40d9fea9c2fda40ab2fed"
+    },
+    {
+      "path": "backend/tests/test_v426_ocr_acl.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v426_ocr_acl.py",
+      "sha256": "f2a6fe63793615b6a6d9cb4dce24e88dc533dbf6acaac3154ccbdfb0f86b3466"
+    },
+    {
+      "path": "backend/tests/test_v426_ocr_store.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_v426_ocr_store.py",
+      "sha256": "6a745afb82ff51a5f0b8835b1fbcbab46c544f0223aea516be76fc691957dfaa"
+    },
+    {
+      "path": "backend/tests/test_workflow.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/test_workflow.py",
+      "sha256": "d6b47f77246529651151e63505116a54b623a54408dace3fdafd30a95ffad7fb"
+    },
+    {
+      "path": "backend/tests/v24_fixtures.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/backend_tests/v24_fixtures.py",
+      "sha256": "b12e5bd19b94cb1c9aeb7631e71911082144b72c1c09a74c9ac043164612c1a1"
+    },
+    {
+      "path": "scripts/tests/test_v425_package.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/script_tests/test_v425_package.py",
+      "sha256": "9d6882b7836727a6c8a710919ddb23112ef4b189127fdef36e2cbf5b6cfda537"
+    },
+    {
+      "path": "scripts/tests/test_v426_manual_package.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/script_tests/test_v426_manual_package.py",
+      "sha256": "f7a9d097834446ed676a02786741e7c59edaa244c8b75047e17e5dccfa221be5"
+    },
+    {
+      "path": "scripts/tests/test_v426_manual_runtime.py",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/03_TESTS/script_tests/test_v426_manual_runtime.py",
+      "sha256": "b3f3e2a32f9dacc8a9a32113542d989d493777dc447534476838eca27d4e42b8"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/05_DEPENDENCY_LOCKS/backend-pyproject.toml",
+      "sha256": "06c9183380a0ae59aea77b495ad4bcf55a8a3f82ebed8d32be95b5eebdb17ac7"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/05_DEPENDENCY_LOCKS/backend-requirements.txt",
+      "sha256": "5ef4f0741681bc8c91821656066f976535436386dcb482f6353e6c72a6be7278"
+    },
+    {
+      "path": "backend/requirements-v424-tested.txt",
+      "origin": "TianxunBuddy_V4.2.6_Technical_Review/05_DEPENDENCY_LOCKS/backend-requirements-v424-tested.txt",
+      "sha256": "9779d7cb7c00af942dcec4d55a570fc028966c7b4854ecf66ab9a31d6a2e96a1"
+    }
+  ],
+  "validation": {
+    "scope": "isolated incoming validation copy; not production acceptance",
+    "python_compile_files": 145,
+    "python_compile_errors": 0,
+    "frontend_build_modules": 63,
+    "existing_regression_passed": 87,
+    "smoke_assertions_passed": 12,
+    "full_regression": "NOT_COMPLETED"
+  },
+  "repository_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 807,
+      "sha256": "f28b41ca0047e91ca1841796765689266d896f2ad8b0cde3a31e6495f19502c0"
+    },
+    {
+      "path": "backend/data/demo_basis_pack.json",
+      "bytes": 531,
+      "sha256": "340566a5c82b98e02c3688e0910faac1668a65b2126dc48873494f528058cf77"
+    },
+    {
+      "path": "backend/data/README.md",
+      "bytes": 611,
+      "sha256": "f4a35550fb45f0fb4a97e56b5ab708e0ea68a96107124fb601adf6e4d3a2dfef"
+    },
+    {
+      "path": "backend/data/rules_test_only.json",
+      "bytes": 4086,
+      "sha256": "5e0630e6a5e0142d2eed515eccd67cc39e2246553b6134da39bf9f5de4aca2f3"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "bytes": 402,
+      "sha256": "06c9183380a0ae59aea77b495ad4bcf55a8a3f82ebed8d32be95b5eebdb17ac7"
+    },
+    {
+      "path": "backend/requirements-v424-tested.txt",
+      "bytes": 1162,
+      "sha256": "9779d7cb7c00af942dcec4d55a570fc028966c7b4854ecf66ab9a31d6a2e96a1"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "bytes": 348,
+      "sha256": "5ef4f0741681bc8c91821656066f976535436386dcb482f6353e6c72a6be7278"
+    },
+    {
+      "path": "backend/scripts/idem_concurrency_evidence.py",
+      "bytes": 8002,
+      "sha256": "6cfb30a71a27e8c54bc3cc30d33fe642a5e0deff9e3fedd25cffbc4814270372"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/tests/authenticated_client.py",
+      "bytes": 2748,
+      "sha256": "960026751d5bf2017f87bc4c89ac58501a1ace0b54bfc1847cfed36bf13f2311"
+    },
+    {
+      "path": "backend/tests/test_api_v41.py",
+      "bytes": 3964,
+      "sha256": "e1dfc0ce0abf951a82ac35ecc51f5d38dd9526ce713a94cbfaf3c871c562946d"
+    },
+    {
+      "path": "backend/tests/test_boq.py",
+      "bytes": 2374,
+      "sha256": "8058b9745321071a074ad197f7e5517f0513c3f32a6d4209141c15bbd68593a1"
+    },
+    {
+      "path": "backend/tests/test_calcrun.py",
+      "bytes": 2172,
+      "sha256": "e94508b9f72bec13e0390023603b65812a0cb008c79514a163959d6a0472561d"
+    },
+    {
+      "path": "backend/tests/test_core.py",
+      "bytes": 4218,
+      "sha256": "821cb7515c7f801df175409721daea43d34948ab8a414b46caa11efa3649f05c"
+    },
+    {
+      "path": "backend/tests/test_gates_v41.py",
+      "bytes": 4885,
+      "sha256": "7530a70a4f1d8579f0b7e9003875c33aac2d85215fbc019ad52bf40222b39507"
+    },
+    {
+      "path": "backend/tests/test_l1_integration.py",
+      "bytes": 7018,
+      "sha256": "453c630225e7db1d0f4a09763971b490c16d4a8cb9906ece32938673305228d6"
+    },
+    {
+      "path": "backend/tests/test_p0_04_gate_binding.py",
+      "bytes": 6463,
+      "sha256": "1540043904741439475f95b9c92a5c0aba863bded4e67f07f1dd379b75441977"
+    },
+    {
+      "path": "backend/tests/test_p0_repro.py",
+      "bytes": 4728,
+      "sha256": "40aadae281b2cd2480b78788a713b373ce21135ea7babfe02d146175c4081dea"
+    },
+    {
+      "path": "backend/tests/test_pg_integration.py",
+      "bytes": 2742,
+      "sha256": "5ea70beac344e2ab59c62eb8ac50963bc78d9b7acdc51964ebd97819b2f00710"
+    },
+    {
+      "path": "backend/tests/test_rules.py",
+      "bytes": 4892,
+      "sha256": "c34301631d8448640186a917042364a4a2df58c12dc619f8ca9c9effd473fd71"
+    },
+    {
+      "path": "backend/tests/test_v24_acl_wire.py",
+      "bytes": 2416,
+      "sha256": "b461a0cfcbb79738443e2ef3bd69e2595f2f3d7b3a629d6bae5a76b73a7507eb"
+    },
+    {
+      "path": "backend/tests/test_v24_api_auth.py",
+      "bytes": 6058,
+      "sha256": "0d53aa9b4e428bc283f434a819c1ba312b1004d80f176ebb4d304b5546117c7e"
+    },
+    {
+      "path": "backend/tests/test_v24_corpus_bind.py",
+      "bytes": 1653,
+      "sha256": "d5773e210bf8cbb731d5e724591afea27ed92347d9e333bc708ee700673fee12"
+    },
+    {
+      "path": "backend/tests/test_v24_deliver_api.py",
+      "bytes": 516,
+      "sha256": "21fba1891abb10652fce7ad59fdfc36c3cb1cbe213f76f081da7e2d7fdcdcc04"
+    },
+    {
+      "path": "backend/tests/test_v24_endpoint_mapping.py",
+      "bytes": 1718,
+      "sha256": "ad1e396470fb13ae9444fc0082616f2ff1f72445dee1fdc417818445946b9d0e"
+    },
+    {
+      "path": "backend/tests/test_v24_files_upload.py",
+      "bytes": 1143,
+      "sha256": "e37fe0dfbd8b31dc4aff91e1a52a91082a0459f3578a5692eb68d16bc0c40aeb"
+    },
+    {
+      "path": "backend/tests/test_v24_goldenset.py",
+      "bytes": 327,
+      "sha256": "33e1dd17e444775a7b98e4a8a9d0033aa6ac01c2afdfdb7c7d241b54930b64c9"
+    },
+    {
+      "path": "backend/tests/test_v24_html_parse.py",
+      "bytes": 1171,
+      "sha256": "1c1376faa9965b2890d90f7d9e07e2c7a72014492123ddb410d24da1e7d47dd9"
+    },
+    {
+      "path": "backend/tests/test_v24_internal_token.py",
+      "bytes": 1737,
+      "sha256": "3129c7fac9f546012a21f042f55002da840a4eb718100ca0ea8262680294b4f6"
+    },
+    {
+      "path": "backend/tests/test_v24_jobs_list.py",
+      "bytes": 482,
+      "sha256": "d80169e2751772db1f428499ff34f60314ee6732dce8f4035fbe93041251393f"
+    },
+    {
+      "path": "backend/tests/test_v24_ocr_path.py",
+      "bytes": 745,
+      "sha256": "2b166b592fbb209c1a791298ab4a151c3436e01c3259955a9360620dffdeb581"
+    },
+    {
+      "path": "backend/tests/test_v24_package_safety.py",
+      "bytes": 1606,
+      "sha256": "91c6ccc481d7d2fe68c680847e7c7603b08e7e8e5bcd97e24aef748a798ce309"
+    },
+    {
+      "path": "backend/tests/test_v24_parse_api.py",
+      "bytes": 1611,
+      "sha256": "e9ce9bbdbe3ae0c2935f85fd3d4f1a0865ba5d26f8cf1fed64e8d06aebc62a3c"
+    },
+    {
+      "path": "backend/tests/test_v24_quota_lib.py",
+      "bytes": 2904,
+      "sha256": "f814ffc35050ac66724133e7e8aaac89c4f96906191ca7daec86f6ccbb4fba89"
+    },
+    {
+      "path": "backend/tests/test_v24_real_l1.py",
+      "bytes": 407,
+      "sha256": "2352a26a653b4b6bd010fd9a15fa67a77fc38fd3abe91f70f1cb549b0232dfe9"
+    },
+    {
+      "path": "backend/tests/test_v24_xlsx_structure.py",
+      "bytes": 1364,
+      "sha256": "4bb3b372d5acc9b4cf1e4ffe27bfa0d6fd3df6758ed8c7d2c8d1a24f130e2d92"
+    },
+    {
+      "path": "backend/tests/test_v421_hardening.py",
+      "bytes": 11670,
+      "sha256": "7b7a8f5e2c4151241ce455ffcace44f2706318b49f18d3de6bbf9c26e1e16f1f"
+    },
+    {
+      "path": "backend/tests/test_v423_acl.py",
+      "bytes": 35436,
+      "sha256": "ffe83f3631023621a0dcb1591775f45a2193a12a73aa7a62096c5610cd29f1ab"
+    },
+    {
+      "path": "backend/tests/test_v423_admission_uniform.py",
+      "bytes": 21681,
+      "sha256": "52ee1c0eda743383601c846af080e354241007a7f5add73a81a72e8a13981ec4"
+    },
+    {
+      "path": "backend/tests/test_v423_auth.py",
+      "bytes": 23759,
+      "sha256": "7bc537ab88e8bbdffa97cb193d9e3d7f7e47f92a566cb8a6d32b80521a4f3ba1"
+    },
+    {
+      "path": "backend/tests/test_v423_deliverables.py",
+      "bytes": 18326,
+      "sha256": "a1bf779371b21e1305aa5052dd32bb9d555bf766e8841f7b763a1f1bb5801deb"
+    },
+    {
+      "path": "backend/tests/test_v423_e2e.py",
+      "bytes": 18046,
+      "sha256": "a09eb3fb3c158a19cb4b755082a33cde382cb672963c28ef2767aa8cb9421413"
+    },
+    {
+      "path": "backend/tests/test_v423_evidence_binding.py",
+      "bytes": 11057,
+      "sha256": "32c35496882e753e6ab69c2bc755b519e2d50f787ced58288ff142251e845777"
+    },
+    {
+      "path": "backend/tests/test_v423_filestore.py",
+      "bytes": 20626,
+      "sha256": "17a6f292f9d2f153116e83ab23f05a5e7454e158cc94cc26d6830a64cf7650dd"
+    },
+    {
+      "path": "backend/tests/test_v423_gates_authority.py",
+      "bytes": 22295,
+      "sha256": "93929bb5ae93d29970445d06d23550b9fe958bc28de3b2cec55a913b027a3580"
+    },
+    {
+      "path": "backend/tests/test_v423_idem_semantics.py",
+      "bytes": 11162,
+      "sha256": "57655d8bd6a0fdd60c3d10ebbaf4673440a73d3066a585099dd8df88e0dfcc7f"
+    },
+    {
+      "path": "backend/tests/test_v423_jgates.py",
+      "bytes": 20804,
+      "sha256": "6a1702ff70089c2ee0499b05b39cf8e83b428975e67aa514910456c2ecb46d5e"
+    },
+    {
+      "path": "backend/tests/test_v423_job_model.py",
+      "bytes": 20924,
+      "sha256": "e81edae292b4adbc815f0569448f4b75ecba6550b497a4341da817b450e41ba3"
+    },
+    {
+      "path": "backend/tests/test_v423_l1_yaml.py",
+      "bytes": 16140,
+      "sha256": "ddd82600df790c98a297960a604a7d1d4e6928329835cadf1dca3bf278c7253c"
+    },
+    {
+      "path": "backend/tests/test_v423_migration.py",
+      "bytes": 26401,
+      "sha256": "3823ccd9021a45414f76b9d8816668e4831441ca9a1169e364d1d05b0dcb130b"
+    },
+    {
+      "path": "backend/tests/test_v423_numeric_all_engines.py",
+      "bytes": 32006,
+      "sha256": "35f9fd125710393b2cb440bf4d0c5e59fefafed2a0f57e158169579e094409bd"
+    },
+    {
+      "path": "backend/tests/test_v423_parsing.py",
+      "bytes": 20178,
+      "sha256": "63fc997adfa1c1b2577d52c10e5fec3f394c94941c6c2007259611ca811bd92f"
+    },
+    {
+      "path": "backend/tests/test_v423_pg_repository.py",
+      "bytes": 34791,
+      "sha256": "d7301a1e9f8cfb00b070832f36aac778ab008a0d54c6a55e2c6fb933180d071e"
+    },
+    {
+      "path": "backend/tests/test_v423_recalc.py",
+      "bytes": 18349,
+      "sha256": "829756d8e81ead2d80ee58f7228914799c76d99d00c98cfe335cc3a5c62d6f6b"
+    },
+    {
+      "path": "backend/tests/test_v423_sqlite_repository.py",
+      "bytes": 27760,
+      "sha256": "f97ca17af95c1630e2099d0b99b65d55f18170de0109eb7430db91df8ba2ac89"
+    },
+    {
+      "path": "backend/tests/test_v423_tx_recovery.py",
+      "bytes": 16359,
+      "sha256": "19cd9a42dd83fe176e908b037ff51d7faecb5877714a974e2cc82ab602176f4b"
+    },
+    {
+      "path": "backend/tests/test_v425_catalog.py",
+      "bytes": 9060,
+      "sha256": "50c09ab104932e704e527cb6ad5680bf01ea124ed1abae8fbebf4fb09cea1814"
+    },
+    {
+      "path": "backend/tests/test_v425_file_parsers.py",
+      "bytes": 17756,
+      "sha256": "9c0a4ef503b5c89cc7d9efa0c2e6150a21924bb20d4d58268fe6499080b68f02"
+    },
+    {
+      "path": "backend/tests/test_v425_legacy_source_acl.py",
+      "bytes": 545,
+      "sha256": "261dc27cb4fd2a34d13fdf710b9071f0f6b7f03833733576fe877649391218ee"
+    },
+    {
+      "path": "backend/tests/test_v425_migration.py",
+      "bytes": 11713,
+      "sha256": "baba353cf509b7b85934b40f2a301101e73eef2f830ab9fd10f7374d31f76da8"
+    },
+    {
+      "path": "backend/tests/test_v425_ocr_review.py",
+      "bytes": 11146,
+      "sha256": "5af3c1ab6fc5ce80d9c20de9ae0bb82b3844ae470bc40d9fea9c2fda40ab2fed"
+    },
+    {
+      "path": "backend/tests/test_v426_ocr_acl.py",
+      "bytes": 12936,
+      "sha256": "f2a6fe63793615b6a6d9cb4dce24e88dc533dbf6acaac3154ccbdfb0f86b3466"
+    },
+    {
+      "path": "backend/tests/test_v426_ocr_store.py",
+      "bytes": 7419,
+      "sha256": "6a745afb82ff51a5f0b8835b1fbcbab46c544f0223aea516be76fc691957dfaa"
+    },
+    {
+      "path": "backend/tests/test_workflow.py",
+      "bytes": 4081,
+      "sha256": "d6b47f77246529651151e63505116a54b623a54408dace3fdafd30a95ffad7fb"
+    },
+    {
+      "path": "backend/tests/v24_fixtures.py",
+      "bytes": 639,
+      "sha256": "b12e5bd19b94cb1c9aeb7631e71911082144b72c1c09a74c9ac043164612c1a1"
+    },
+    {
+      "path": "backend/txbuddy/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "backend/txbuddy/api.py",
+      "bytes": 46752,
+      "sha256": "c1f3da9e0814a7591a1946be13264d3027c2b239c1f74953629aef1b5a3f8909"
+    },
+    {
+      "path": "backend/txbuddy/api_models.py",
+      "bytes": 4277,
+      "sha256": "58ca0f024767b9ae36b07942a2c275397249de873b8c76864f37e3b8b9dc6bc7"
+    },
+    {
+      "path": "backend/txbuddy/core/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "backend/txbuddy/core/admission.py",
+      "bytes": 9166,
+      "sha256": "9124101a3a8059e9f21f0e82f16cb91c8433109b75ebe4458c76f26b670dee62"
+    },
+    {
+      "path": "backend/txbuddy/core/basis.py",
+      "bytes": 1847,
+      "sha256": "c0dfa826d4a81b55de57f7fef554c65cd84264de9600fc3c68f55ec83a715faa"
+    },
+    {
+      "path": "backend/txbuddy/core/boq.py",
+      "bytes": 7152,
+      "sha256": "46f8dd8478b386b02ecf42edbc997f3298466315382b4d3b5955deb740ed7006"
+    },
+    {
+      "path": "backend/txbuddy/core/calcrun.py",
+      "bytes": 15149,
+      "sha256": "4e2964462e03cdc67f81cbf6c61f156fe38450e167431b1e34ac951b01f548c8"
+    },
+    {
+      "path": "backend/txbuddy/core/evidence.py",
+      "bytes": 17941,
+      "sha256": "6c5d537b796a6035b28c556c77a3c024e3a39e35c27388a305e36a3d70ea80d4"
+    },
+    {
+      "path": "backend/txbuddy/core/gates.py",
+      "bytes": 31608,
+      "sha256": "ed4a8726345e1814747bf03b89a13fb8a995aebdd006851b6caef8b900cacb07"
+    },
+    {
+      "path": "backend/txbuddy/core/gates_service.py",
+      "bytes": 19043,
+      "sha256": "56b1d6d03008c4ff60d88a4cfe86a3afe764274df6b09f8a3aca7c4bdcc97417"
+    },
+    {
+      "path": "backend/txbuddy/core/goldenset.py",
+      "bytes": 8459,
+      "sha256": "c6a1cb8aeabb59772b546381b750f97acac2976eddb1543e8aff0a45282931dd"
+    },
+    {
+      "path": "backend/txbuddy/core/numeric.py",
+      "bytes": 13139,
+      "sha256": "400fafd4a2528ad296bde964efaedb17fc846831e208e791472f1ccab5cbb32f"
+    },
+    {
+      "path": "backend/txbuddy/core/precision.py",
+      "bytes": 3963,
+      "sha256": "868984345cfb37b72e7e9e271d65b72cc7ec3fc1e41ccee60f027517ac02a7af"
+    },
+    {
+      "path": "backend/txbuddy/core/pricing.py",
+      "bytes": 8410,
+      "sha256": "801cc585d259c006e8abe1ebe78de6c1ffd8eb5917f3dc90919cc1a444dc2df6"
+    },
+    {
+      "path": "backend/txbuddy/core/quantity.py",
+      "bytes": 3531,
+      "sha256": "b04c0a0ec9bbbb83aa9f0da1ac70d2c929271f8bf1eb9bfed086d2fe5abc08a5"
+    },
+    {
+      "path": "backend/txbuddy/core/quota.py",
+      "bytes": 7126,
+      "sha256": "44af6b685475377df0f130b1f4f49b9541fd073b49393d6d2c69dd5ce1108542"
+    },
+    {
+      "path": "backend/txbuddy/core/record_writer.py",
+      "bytes": 3690,
+      "sha256": "542449aefd7b84b6dcc8b7ec9265f4c13df9bb4638fb2b9f253051d51805e3af"
+    },
+    {
+      "path": "backend/txbuddy/core/rules.py",
+      "bytes": 17092,
+      "sha256": "4bced6a0d5c032fe0a002809ad4f6aa603cb92186015f0a9409ed24776dc5b19"
+    },
+    {
+      "path": "backend/txbuddy/core/workflow.py",
+      "bytes": 5696,
+      "sha256": "d9c6fc60fba2e6e8bae13612c78b460cdad05bf5837b0574eb3f3eb4fe9adf51"
+    },
+    {
+      "path": "backend/txbuddy/core/workflow_yaml.py",
+      "bytes": 27269,
+      "sha256": "c359367686ef4dda49082de2bb2664d4c2df1b4de9e22d4428ccbd3ec656999d"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/__init__.py",
+      "bytes": 982,
+      "sha256": "09c8b0050fa8d7c3d43b1d9ece9e998e366827a691f5079e65c48ce3490131b6"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/common.py",
+      "bytes": 2294,
+      "sha256": "548ac792a3b653cfc8dd897f36c31ab2278344533e92e6d94c85dd47c665fa8d"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_budget.py",
+      "bytes": 5237,
+      "sha256": "6ef9e5a7860912148340feb3daf708614be080e53bb0be53d620d3ac10b2cea0"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_detail.py",
+      "bytes": 7632,
+      "sha256": "47e2be75f984ad831e9040e1d48b4b6ca75ff91b36091f7ec71aefc9c7cb3b3f"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/generators_pricing.py",
+      "bytes": 8612,
+      "sha256": "08204215e4459488a8ec93ab0a83b84e5b382269a6350c5ad6feac1f8e72eec4"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/model.py",
+      "bytes": 11687,
+      "sha256": "d1b43dbcdb3e8f1e016536e719ff4590ae62e8e32324e597bdffee70308502d7"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/pdf.py",
+      "bytes": 9576,
+      "sha256": "ecdb1fb4444d4d854e1f3b1144fb77fa0f879cc83e265866ac99b446743dc98c"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/service.py",
+      "bytes": 6979,
+      "sha256": "bfc4e23a7a5fe957550d2a77c6db03cbb4ec9485f0ed3f0f40c86ebd2e89d791"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/specs.py",
+      "bytes": 2065,
+      "sha256": "dea395970359507e59dd01509ef32e00c2fc370d324e37a1d065fb4ef8b7c761"
+    },
+    {
+      "path": "backend/txbuddy/deliverables/xlsx_util.py",
+      "bytes": 5209,
+      "sha256": "62ad86ff8113caba1ecad0b7337ec515d14ae37edea5595aefd0dea65a8ea1b4"
+    },
+    {
+      "path": "backend/txbuddy/governance/__init__.py",
+      "bytes": 57,
+      "sha256": "0107cf57d8bf382095d3318c5899ede7bff1e582168f86d037dbb5ee722f4152"
+    },
+    {
+      "path": "backend/txbuddy/governance/api.py",
+      "bytes": 11201,
+      "sha256": "8848c3d912ee49b09666eb8924ba788686a4f383860f77c7131a2e756b6e2061"
+    },
+    {
+      "path": "backend/txbuddy/governance/catalog.py",
+      "bytes": 2689,
+      "sha256": "d321b6dd116277beceea4c20f7c43f2a260f4851fc0c69bbed60e88089eef5de"
+    },
+    {
+      "path": "backend/txbuddy/governance/migration.py",
+      "bytes": 21689,
+      "sha256": "cd98118956112d27ccf996822f7131ec0c38c48091010ca10a55dce080f28aef"
+    },
+    {
+      "path": "backend/txbuddy/governance/ocr_review.py",
+      "bytes": 34104,
+      "sha256": "b204590d4a53dfcb7f77ad6ef95e9776b9e6eda3e516cfdb13cc360459f34a3a"
+    },
+    {
+      "path": "backend/txbuddy/models.py",
+      "bytes": 12279,
+      "sha256": "126b2532a1ff6f047b6dc4faa4b4468869c0905381c5866eee958d9348a1a30c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/__init__.py",
+      "bytes": 1246,
+      "sha256": "36e0f976d66c9c3347e5a615fb205d95dee51bd09a54b32bf8abd26257453882"
+    },
+    {
+      "path": "backend/txbuddy/parsing/archive_adapter.py",
+      "bytes": 22634,
+      "sha256": "73273dec46a5f2f81d5e491f1726488416c5d2cd645e3a384d6d0e8d1ef137f2"
+    },
+    {
+      "path": "backend/txbuddy/parsing/base.py",
+      "bytes": 6925,
+      "sha256": "0dd9db4f642d0fdcfa943c970eb48c124b8f2ce31bcf77f364911ea3a10a8c0d"
+    },
+    {
+      "path": "backend/txbuddy/parsing/doc_adapter.py",
+      "bytes": 8618,
+      "sha256": "b7f839a9e4c0116da831fbc411023493e2664d0e8c38d58285623f77590a8973"
+    },
+    {
+      "path": "backend/txbuddy/parsing/docx_parser.py",
+      "bytes": 3968,
+      "sha256": "bdb11f011117754c69c21f0820e14ad80b3aeefc68f66bffef44ad0d26dbc1b0"
+    },
+    {
+      "path": "backend/txbuddy/parsing/dwg_adapter.py",
+      "bytes": 10347,
+      "sha256": "d773c2eca8c44755628289984553e6ce426f304670077d08495a0132c2d095f7"
+    },
+    {
+      "path": "backend/txbuddy/parsing/dxf_parser.py",
+      "bytes": 4008,
+      "sha256": "790d3674fad868f3767ddf16567484c6d453ef10feb05f52b9651715596af67c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/html_parser.py",
+      "bytes": 3719,
+      "sha256": "9c717b0c1a9e2037aec6e7194ba199bee85f0319d4d67046a1b631bb7399513c"
+    },
+    {
+      "path": "backend/txbuddy/parsing/member_worker.py",
+      "bytes": 2071,
+      "sha256": "a9ad38a4011ce32d58e02d95f504410194f99a3f6bfee9924b74ce15783fd3e1"
+    },
+    {
+      "path": "backend/txbuddy/parsing/ocr.py",
+      "bytes": 4110,
+      "sha256": "f24d77bd9e819d3dfad381504b7d21d55362ac0ee3a50eefa4f8994076272dd4"
+    },
+    {
+      "path": "backend/txbuddy/parsing/pdf_parser.py",
+      "bytes": 3850,
+      "sha256": "8f60535b9e9068d61b7d23755ce911c72e7f2ba1a0f2edbd5e03fa5a23b7d5ca"
+    },
+    {
+      "path": "backend/txbuddy/parsing/process_limits.py",
+      "bytes": 6812,
+      "sha256": "bcae14ba977a9a4086ede7770845380310430a8586772f8f512e0963fd155eeb"
+    },
+    {
+      "path": "backend/txbuddy/parsing/rar_metadata_worker.py",
+      "bytes": 1165,
+      "sha256": "794f5d402e00bf0d3e85e06d35a80b2b10b29264c957f238d1120d1c33d69e17"
+    },
+    {
+      "path": "backend/txbuddy/parsing/registry.py",
+      "bytes": 3072,
+      "sha256": "837af16846dbfcad5e6a3f9381ced44e9b2247aecb788a4a0bdf6af44363a42e"
+    },
+    {
+      "path": "backend/txbuddy/parsing/text_parser.py",
+      "bytes": 1874,
+      "sha256": "a1160c1bb896391d4eb4f36037f115752c483e1d43b97ecfc6e98e9485442fca"
+    },
+    {
+      "path": "backend/txbuddy/parsing/xlsx_parser.py",
+      "bytes": 5560,
+      "sha256": "462c1bc6af84c977c3adba05732c86bbcde8e35e1548f95dfde8b17c28ecba35"
+    },
+    {
+      "path": "backend/txbuddy/pilot/__init__.py",
+      "bytes": 133,
+      "sha256": "4d45067d6693ee144b9dc3330a2ddfd0ecab5e18856bd26e5fca48d3ed881bcf"
+    },
+    {
+      "path": "backend/txbuddy/pilot/api.py",
+      "bytes": 14762,
+      "sha256": "4e342a4d98d4da4d8b0d86587603dee430864f0db0d648e98348c6ea001c416c"
+    },
+    {
+      "path": "backend/txbuddy/pilot/boq.py",
+      "bytes": 3641,
+      "sha256": "979fdeeedb1b1d19ad00c8eb3a3458cd55cf6a738b46c2768b5b98d938f644de"
+    },
+    {
+      "path": "backend/txbuddy/pilot/database.py",
+      "bytes": 3420,
+      "sha256": "4f561b6da743ffa0bf246571057877138a6f85e1f1778ffcc74d230afdaaa224"
+    },
+    {
+      "path": "backend/txbuddy/pilot/extraction.py",
+      "bytes": 1209,
+      "sha256": "b226ab864e41ce9fa0855d76623ab8d0ce2900e593cf4d06eed428416ed507cf"
+    },
+    {
+      "path": "backend/txbuddy/pilot/importer.py",
+      "bytes": 8308,
+      "sha256": "89b7a05e6d71d2e8e4940fe7b6d95568156c97e846a399d1e77fabb28779edeb"
+    },
+    {
+      "path": "backend/txbuddy/pilot/provenance.py",
+      "bytes": 1838,
+      "sha256": "b846c61a2bb432aeb0cb595ef6951dac31f4baf6a695d100ff4a0f1b8d21194c"
+    },
+    {
+      "path": "backend/txbuddy/pilot/service.py",
+      "bytes": 10855,
+      "sha256": "75db24209fe0e4304bb127f856ccf76f2d4559a62c385d9c20f1e2d98f7450c6"
+    },
+    {
+      "path": "backend/txbuddy/prd_v2_extensions.py",
+      "bytes": 62242,
+      "sha256": "6ff702d503bf646072c7a86a84f2a9224a263be002fc123414840c6788608a68"
+    },
+    {
+      "path": "backend/txbuddy/repository/__init__.py",
+      "bytes": 3168,
+      "sha256": "2bdfb22eca51465974476d78e47ec1c6a8e1bf202e914480abd3484b06ffd220"
+    },
+    {
+      "path": "backend/txbuddy/repository/base.py",
+      "bytes": 12614,
+      "sha256": "dd5ddc820d7e83235232e1dca2af1a6ef1399d7c2f935443ece6612b6ac1e3a5"
+    },
+    {
+      "path": "backend/txbuddy/repository/migrations.py",
+      "bytes": 29356,
+      "sha256": "74f59610bbdf9350e33532fa5c0b5e532a7625760bd719c93fcf9df271fc164f"
+    },
+    {
+      "path": "backend/txbuddy/repository/pg.py",
+      "bytes": 39765,
+      "sha256": "6a89776976f55c85f1f8637709d5adc39fc9f60e7e89343d80ab2fd46281ef57"
+    },
+    {
+      "path": "backend/txbuddy/repository/schema.py",
+      "bytes": 10818,
+      "sha256": "16683147213622f320bb2e8b8a7541498c5c4aee11e054b1afb371d55f8dd442"
+    },
+    {
+      "path": "backend/txbuddy/repository/sqlite.py",
+      "bytes": 22295,
+      "sha256": "edd5cd848d271985200aaf3be32a45ffbfca3f7295a47fb4dc5a1acb6c5ec9bb"
+    },
+    {
+      "path": "backend/txbuddy/repository/unit_of_work.py",
+      "bytes": 8795,
+      "sha256": "b814e62a49e524ed8ca5aa80095d887d3fe53944ccc406c3edc606f548dd7290"
+    },
+    {
+      "path": "backend/txbuddy/security/__init__.py",
+      "bytes": 2727,
+      "sha256": "77ce2c716643c0938ff20a0a67d5e5a36a4bbf8ae1fa46a8b0a1ed66863ee52a"
+    },
+    {
+      "path": "backend/txbuddy/security/acl.py",
+      "bytes": 17377,
+      "sha256": "c87c8cf494cc40cfa647d37315c12a303d71c9788474dedbea83d26c0615adc4"
+    },
+    {
+      "path": "backend/txbuddy/security/acl_routes.py",
+      "bytes": 6007,
+      "sha256": "be129a92efcc45837799d9bc4f3f7371df910b649e49ba410d7af5660bc22e8c"
+    },
+    {
+      "path": "backend/txbuddy/security/app.py",
+      "bytes": 6471,
+      "sha256": "16cf46994fcae657edcb0da6a49aefe36db5437818706223439c70a0d2e1a632"
+    },
+    {
+      "path": "backend/txbuddy/security/context.py",
+      "bytes": 7260,
+      "sha256": "52c5f24ff57a7af0170f8ecb6760a898b4f1023fc7bc25fc98b5ba4197f8c5db"
+    },
+    {
+      "path": "backend/txbuddy/security/deps.py",
+      "bytes": 5822,
+      "sha256": "e45d30df30314889f9c91521c9f9f5b88ebd24a12bdb365932fd58987bc21ccb"
+    },
+    {
+      "path": "backend/txbuddy/security/files.py",
+      "bytes": 9284,
+      "sha256": "fd47f3cfe05db7ee2f10d8328d4e93894d5fc59c929e4c347f880000bddc449e"
+    },
+    {
+      "path": "backend/txbuddy/security/routes.py",
+      "bytes": 10265,
+      "sha256": "15286441b30263a56223a31334a556f6c233393c0fec5add5a26994e6c2d1322"
+    },
+    {
+      "path": "backend/txbuddy/security/runtime.py",
+      "bytes": 9517,
+      "sha256": "677010ef6131875d95b3f333b16341c93428abcd926cda34e83bf03902eacce2"
+    },
+    {
+      "path": "backend/txbuddy/security/tokens.py",
+      "bytes": 9068,
+      "sha256": "d834dd85b34cdac5e865b1dc2469ce2cadb3c6211fd2e6b192c422fedb824c65"
+    },
+    {
+      "path": "backend/txbuddy/security/users.py",
+      "bytes": 4489,
+      "sha256": "04abeae785ecfec51b814b1cab30d0c83152385f7c508b02ee6472eb40c8a208"
+    },
+    {
+      "path": "backend/txbuddy/storage/__init__.py",
+      "bytes": 983,
+      "sha256": "2cb4b2abd8a05e66df60e6fd9330522d5a5ecf39cf2470357ef799a76e1886bd"
+    },
+    {
+      "path": "backend/txbuddy/storage/filestore.py",
+      "bytes": 23514,
+      "sha256": "876d3ed68ccd57fe8ab275ab65ef2b7dc2067afbe1fc03f20674f9424ef67082"
+    },
+    {
+      "path": "backend/txbuddy/store.py",
+      "bytes": 16402,
+      "sha256": "88cc99aedfdade38f35f2e45e43e5e0fd359612aca94e1a0fc66c548d7456145"
+    },
+    {
+      "path": "DATA_LICENSE_STATUS.md",
+      "bytes": 3295,
+      "sha256": "f1f935db4843272b44c689176005ac5d4e6c31488a68df2112a603f5bfef4645"
+    },
+    {
+      "path": "docs/UPGRADE_REVIEW.md",
+      "bytes": 1679,
+      "sha256": "4d9abfa380a80f0689f079d2d44ed550adaad9f9576c768f4063c20ee134643c"
+    },
+    {
+      "path": "frontend/e2e/auth-ui.spec.ts",
+      "bytes": 1230,
+      "sha256": "a6d92394a238340be1acdaa06218662c43a8d82b5bee7070d8b6dc9f5c697a95"
+    },
+    {
+      "path": "frontend/e2e/governance.spec.ts",
+      "bytes": 5829,
+      "sha256": "96de527e8037bed23ceb0bccb9a8fb79a26c656401da58f1293ed0abe67dc941"
+    },
+    {
+      "path": "frontend/e2e/manual-observer.mjs",
+      "bytes": 3240,
+      "sha256": "ab84c1715e5fc20356aba4273739bc6733ccf8ede316883af8f0c24c4c81bfc8"
+    },
+    {
+      "path": "frontend/e2e/ocr-roles.spec.ts",
+      "bytes": 4926,
+      "sha256": "7eb29abd92b85ab02950198ce067d21a80d3f96dc0456ca820213efa7cd5aef6"
+    },
+    {
+      "path": "frontend/e2e/server-v425.mjs",
+      "bytes": 1892,
+      "sha256": "2abeaa843ba46c9ced31416b5c3c78d965c6a77d134f920d86c87554799ab544"
+    },
+    {
+      "path": "frontend/e2e/server.mjs",
+      "bytes": 1799,
+      "sha256": "f5390696e6a51cb811d1b0dd42a3af232660db5dbaa693b042f92343df801e82"
+    },
+    {
+      "path": "frontend/env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 595,
+      "sha256": "3331918d2ddaae2504fa7d72cc2597e3eaa7b5356fd9444a401b890f7e39342b"
+    },
+    {
+      "path": "frontend/manual-e2e/workbench.spec.ts",
+      "bytes": 19397,
+      "sha256": "37e9e358cd823f41e5812c95dc60fbf3294d854ce2117388135d089e2a58db53"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 54072,
+      "sha256": "87538b4ffcde4b84d602b90013c518c9c4000aadecf6417070d8be72b0b8cf37"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 520,
+      "sha256": "afd23a6b9419e396b3fd7c2ed4ff9fc8a4307a7fdf3c7160cb33523f34f28e9c"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 650,
+      "sha256": "af1c1b421208faea5b3dce3aa0b387b07cd5b877dc315e7bc0502a33a728caf4"
+    },
+    {
+      "path": "frontend/playwright.manual.config.ts",
+      "bytes": 585,
+      "sha256": "101144b5c2918dfd1853414af93eadae34ea0f674e9b82f0526b00990d6c07df"
+    },
+    {
+      "path": "frontend/playwright.shell.config.ts",
+      "bytes": 857,
+      "sha256": "e283c3710055e9d9a6b5f32779ca969b70334d15dc9fa0a34a83f7cd77dba55f"
+    },
+    {
+      "path": "frontend/playwright.v425.config.ts",
+      "bytes": 679,
+      "sha256": "1703ab27bb77185fae670e05af393d53c9c5bd32a853c055de8edb66fad08fa9"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 11281,
+      "sha256": "b1dcbf8b13f29158317a19f7ff64264db8d36d6ec673060e093bab6438e843ae"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "bytes": 11396,
+      "sha256": "d416362ae13b95986a005874eec1523eaa08895adf250223f9ca2f27cb4bffe4"
+    },
+    {
+      "path": "frontend/src/auth.ts",
+      "bytes": 562,
+      "sha256": "6a04af7552f2e056f2cd578495e8913a4082dcbe8685d7c9de32911a967be698"
+    },
+    {
+      "path": "frontend/src/components/EndpointPanel.vue",
+      "bytes": 1101,
+      "sha256": "26e5ca372447b847aba2d84eaf6f663623b618ee255db93691a9f0ce5e8a758f"
+    },
+    {
+      "path": "frontend/src/components/JsonField.vue",
+      "bytes": 637,
+      "sha256": "38fa9a2b35b7a2a3ff9e1542e390eead365844259f925a91d22fdc804c4435b3"
+    },
+    {
+      "path": "frontend/src/components/LoginPanel.vue",
+      "bytes": 2335,
+      "sha256": "f2a212f54c4dbdfd7d4806fab4032cbebf149c70653f5475310d7460cf571f01"
+    },
+    {
+      "path": "frontend/src/components/PageHeader.vue",
+      "bytes": 290,
+      "sha256": "db484356d8cd670d92f17ddc14abd8f062e6b37e3844fb0c77cb2218d6da5818"
+    },
+    {
+      "path": "frontend/src/components/ResultPanel.vue",
+      "bytes": 905,
+      "sha256": "fa8ec3dd5c5e5a2b83dc210efbbc0186fcfd1c3bb662958d310b8ec646761f1a"
+    },
+    {
+      "path": "frontend/src/config.ts",
+      "bytes": 2931,
+      "sha256": "7f4940361da476c559b8cc4bd2a8a8c6ec08c4463628307d9e1352f1011e72f5"
+    },
+    {
+      "path": "frontend/src/diagnostics.ts",
+      "bytes": 1535,
+      "sha256": "0e5463d80238da0399ff1f785c01651d371d3da1a4a270bdd3f0baeb44881f4f"
+    },
+    {
+      "path": "frontend/src/endpoints.ts",
+      "bytes": 5747,
+      "sha256": "dd8de3f79fce3b731f053c538ef76eff2885c8df301dbccf1fa63b5acaccae0c"
+    },
+    {
+      "path": "frontend/src/governance.ts",
+      "bytes": 508,
+      "sha256": "fbbb02ac897f38d99645d6ef17847f9fe3929f68b1b6597c59ebea5253c9f1d7"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "bytes": 116,
+      "sha256": "94b703fafecdc89fecf5dea411938d3854d191d3eed8314265a16ce53dfe84b3"
+    },
+    {
+      "path": "frontend/src/pages/BidWorkbenchPage.vue",
+      "bytes": 13573,
+      "sha256": "14e185e43f213b6dc45ed2515a6bd9366eedd3112f700564eacdf1050ee2be16"
+    },
+    {
+      "path": "frontend/src/pages/BoqPage.vue",
+      "bytes": 6832,
+      "sha256": "dc9844040033039d667b24dbf2903e30e3e8b0f6a1c642d26cd6bb384540142c"
+    },
+    {
+      "path": "frontend/src/pages/CockpitPage.vue",
+      "bytes": 13466,
+      "sha256": "64f043430fc3a6abdede51a57054d99a4a400b8da6f7039fbe8a85a8b41b48c8"
+    },
+    {
+      "path": "frontend/src/pages/DeliverablePage.vue",
+      "bytes": 6550,
+      "sha256": "ed0732a613ff345ced952e442cd7f857fb4007b84d5f54a939819df5bfa9b6cb"
+    },
+    {
+      "path": "frontend/src/pages/DocumentsPage.vue",
+      "bytes": 4753,
+      "sha256": "64d9e01717b9a38e751c7fcb38b6bae5e102d650352c2db9f2f927c6e1ce9c21"
+    },
+    {
+      "path": "frontend/src/pages/EvidencePage.vue",
+      "bytes": 5699,
+      "sha256": "1bbb62d820ff8e4fe75fca69ba10bb574165e1463a7a5513bb008e869c08e645"
+    },
+    {
+      "path": "frontend/src/pages/OcrReviewPage.vue",
+      "bytes": 14677,
+      "sha256": "bddb3f677feff5d256449a0d02014dc0bda66c43cb5b725436676dd9351e491e"
+    },
+    {
+      "path": "frontend/src/pages/PricingPage.vue",
+      "bytes": 9148,
+      "sha256": "01f0d176ced7de3b179ae6f2a4336fa4efd6f32b24649dd7ed1c3f1c0f2cc4af"
+    },
+    {
+      "path": "frontend/src/pages/ProjectPage.vue",
+      "bytes": 12123,
+      "sha256": "4c8d5744eb11a4cacf03220ec2230673ffff2c8e1d5b7836fe8d436c787b995d"
+    },
+    {
+      "path": "frontend/src/pages/ProjectReadinessPage.vue",
+      "bytes": 5344,
+      "sha256": "adc0b195f74ca33127b7ff8134830b69e53465440536af23ea594e2b3a8605b8"
+    },
+    {
+      "path": "frontend/src/pages/QuantityPage.vue",
+      "bytes": 10445,
+      "sha256": "fcbaa42cd82e66fa08e4ec2dece7a1ad5c54f55d5ed21d9b63237fe0a98a5b0e"
+    },
+    {
+      "path": "frontend/src/pages/QuotaPage.vue",
+      "bytes": 8121,
+      "sha256": "dcc5549381a2b464c6e224d7aaf6696082407aaafdd299d95c32c75e9f21475e"
+    },
+    {
+      "path": "frontend/src/pages/ReviewPage.vue",
+      "bytes": 8621,
+      "sha256": "51181c98319badd3c023b3586c25ff796b215cee7ab08afc91b78074f0efa69e"
+    },
+    {
+      "path": "frontend/src/pages/SamplePilotPage.vue",
+      "bytes": 10867,
+      "sha256": "09ad4662068d11b33d9f98e355b487c66643a1122c515b18ca155216af5bae36"
+    },
+    {
+      "path": "frontend/src/session.ts",
+      "bytes": 5153,
+      "sha256": "18550503528a0e1cda3495f4ee7f7c636b3cdb16110bf75eaf7e2e2b067589da"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "bytes": 10174,
+      "sha256": "f0063def3ad66ea53a4f8fad6000042cf5022c6096eb7db0941b71613eaecb7f"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "bytes": 4042,
+      "sha256": "4855bff1f220a1d4f0ef9798ccb2f5c953ff2e2a0b30c958eea1f8909e74a685"
+    },
+    {
+      "path": "frontend/src/useApi.ts",
+      "bytes": 1847,
+      "sha256": "522b4620cfd1c2eb0b87d096b8852c24afe02d8df1c16236b15e9c4ce0a404a7"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 448,
+      "sha256": "3fbba6f6d6b80a49a2e8870fef9202e43e9fc271ef4bf5b5908e8efabc5e8fd6"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 559,
+      "sha256": "457ab3659f14f18848eee5e51d0761f10d728ffe8566bfe6de6157578c4481e8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1485,
+      "sha256": "a4ea337a6f85e514d189aebf9dd5e163b5246c377628476d0521731b36e79b9f"
+    },
+    {
+      "path": "schemas/appraisal_intake.schema.json",
+      "bytes": 723,
+      "sha256": "cd75f72c24dec8bbb98ffc56232acb40b7f65fe0047b563fde13083520f7a2e4"
+    },
+    {
+      "path": "schemas/budget_submission.schema.json",
+      "bytes": 587,
+      "sha256": "090ffb7f3b66495eaf517731852c92316a89feac8f3096af299ed03e5ccbb202"
+    },
+    {
+      "path": "schemas/change_visa.schema.json",
+      "bytes": 668,
+      "sha256": "ca4c09bab72f76dfdedf1ce4f4bb38577c1e3c15a8e7d2c673e38f1d727a7d70"
+    },
+    {
+      "path": "schemas/contract.schema.json",
+      "bytes": 633,
+      "sha256": "c4d0bafaeff894ea8da58e723321cde13d9cb837796a0906b01b5b45ac67b2d1"
+    },
+    {
+      "path": "schemas/drawing_index.schema.json",
+      "bytes": 607,
+      "sha256": "da0b9b36276dc3c81006005e365a296f5453f0991b7d8dd69b7af3035641be2d"
+    },
+    {
+      "path": "schemas/measurement_payment.schema.json",
+      "bytes": 612,
+      "sha256": "2a4b72bee2365d4c5f95bb86648fb9c664be8fc3067b95f50542ffaafd40c0a9"
+    },
+    {
+      "path": "schemas/settlement_submission.schema.json",
+      "bytes": 581,
+      "sha256": "52b1c1c6851f51683c665a0e85748826381be3ee08cd82e81c95737ae265d9a2"
+    },
+    {
+      "path": "schemas/tender_doc.schema.json",
+      "bytes": 667,
+      "sha256": "0f1e11f75da6e686640142d1f4e304e60196c66cc8c7c4f57b98690103d8b2fa"
+    },
+    {
+      "path": "scripts/package_v424.py",
+      "bytes": 6716,
+      "sha256": "f9fe3bde7891fc92922296ef5e5c5b7f55c77cf0c6850c2c503ca05941924072"
+    },
+    {
+      "path": "scripts/package_v425.py",
+      "bytes": 8113,
+      "sha256": "768b4ee92c8027b7d5602c0fb400970676e6c390dae6327613e4eab67ea06436"
+    },
+    {
+      "path": "scripts/package_v426_manual.py",
+      "bytes": 8735,
+      "sha256": "1927b4b60501c0be13fe1343aea27668d7bbe6cf2c27c02901d4c0f5b6ce939b"
+    },
+    {
+      "path": "scripts/tests/test_v425_package.py",
+      "bytes": 2037,
+      "sha256": "9d6882b7836727a6c8a710919ddb23112ef4b189127fdef36e2cbf5b6cfda537"
+    },
+    {
+      "path": "scripts/tests/test_v426_manual_package.py",
+      "bytes": 1032,
+      "sha256": "f7a9d097834446ed676a02786741e7c59edaa244c8b75047e17e5dccfa221be5"
+    },
+    {
+      "path": "scripts/tests/test_v426_manual_runtime.py",
+      "bytes": 7795,
+      "sha256": "b3f3e2a32f9dacc8a9a32113542d989d493777dc447534476838eca27d4e42b8"
+    },
+    {
+      "path": "scripts/v426_manual_browser.py",
+      "bytes": 1989,
+      "sha256": "968bace4cb45b2349bd98e891514b50a8ab203bd8f19491e604ae76196657b44"
+    },
+    {
+      "path": "scripts/v426_manual_legacy_browser.py",
+      "bytes": 320,
+      "sha256": "d4bf3aeeadd8369ab19147d16294e4bddaf894be831bb0d9d3f4a43b0b154ffd"
+    },
+    {
+      "path": "scripts/v426_manual_regression.py",
+      "bytes": 297,
+      "sha256": "d49fce1d382d2eb943c999297c378abde65b43326b790220b8ad4e6ae638cfa9"
+    },
+    {
+      "path": "scripts/v426_manual_runtime.py",
+      "bytes": 41441,
+      "sha256": "4eb14f150a141bba8e6e26a1be97bd2605dcaa220f79ccdd17c8475689ff3496"
+    },
+    {
+      "path": "scripts/v426_package_verify.py",
+      "bytes": 5088,
+      "sha256": "70bb40144df5a6206aba21ed7a20ed78d928b40a69d8348a3aeac1324f45e8ba"
+    },
+    {
+      "path": "scripts/V426_TASK_QUEUE.json",
+      "bytes": 1316,
+      "sha256": "f062afd4a1306132030297ed87ed38b982ee36baa7453f893f32ff4efa9189a8"
+    },
+    {
+      "path": "sql/001_core_schema_postgresql.sql",
+      "bytes": 9237,
+      "sha256": "ac9b5acdb49b1d02bae25c3d75c787d061510207ecf4eefadfa7eb767602fede"
+    },
+    {
+      "path": "sql/002_workflow_and_idem_postgresql.sql",
+      "bytes": 2009,
+      "sha256": "5989cf9e4207d83541bb93456c20cdf0e2edda75123188d1182f305becd58030"
+    },
+    {
+      "path": "sql/003_repository_runtime_postgresql.sql",
+      "bytes": 5260,
+      "sha256": "8120fee4582a8e673a9945e842f6c2e26518815bae833f41d05718286dccec6b"
+    },
+    {
+      "path": "sql/004_sample_pilot.sql",
+      "bytes": 4017,
+      "sha256": "ce0fcec706b2be3387d891841c599ee1a35e1e21578a26aa8a1be30ab555880b"
+    },
+    {
+      "path": "sql/005_v425_unification_poc.sql",
+      "bytes": 10665,
+      "sha256": "8c24e85a2407c9cfa0fdbe8363863333182433e6d913282c073d19cfe0132df6"
+    },
+    {
+      "path": "sql/006_v426_ocr_audit_poc.sql",
+      "bytes": 2975,
+      "sha256": "3a849eac7f7d1a43912a063b798c1e22b17bc4a56b1427d2c7a90a0ea6177ab9"
+    },
+    {
+      "path": "sql/007_v427_prd_v2_completion.sql",
+      "bytes": 4661,
+      "sha256": "3ec8bc85a9a3570d417d4a3457112e634e271906efe89ba823d5670de3b0732a"
+    },
+    {
+      "path": "sql/migrations/postgresql/R001__core_schema.sql",
+      "bytes": 1368,
+      "sha256": "b6a0d2f69159f4eaeccd9f5cf59243ca89cd50304cc113cb5441ab3337ff4d67"
+    },
+    {
+      "path": "sql/migrations/postgresql/R002__workflow_and_idem.sql",
+      "bytes": 444,
+      "sha256": "3b65aad3f003a54219c26f3dacc250cce6b3e910213f099f49ad7a1f7a14f394"
+    },
+    {
+      "path": "sql/migrations/postgresql/R003__repository_runtime.sql",
+      "bytes": 721,
+      "sha256": "1d5e258c99221ae9725d494468b6347a6a533c11da6e5cdd18b9a9f0009ef077"
+    },
+    {
+      "path": "sql/migrations/README.md",
+      "bytes": 3188,
+      "sha256": "b86fd349189d27250159f385067f137dc27f7204f576e5f5366c1a96fd7ca0d0"
+    },
+    {
+      "path": "sql/migrations/sqlite/R001__core_tables.sql",
+      "bytes": 316,
+      "sha256": "d7dae8e1e16d85cecb5ccd6ad725d814a77cae1b93c84909eec19a144b22848f"
+    },
+    {
+      "path": "sql/migrations/sqlite/R002__workflow_tables.sql",
+      "bytes": 270,
+      "sha256": "7df7d621f4bed49bb344185c48ecd9634ad6c4ec4e50a3e91dc415ca281fcf2c"
+    },
+    {
+      "path": "sql/migrations/sqlite/R003__record_tables.sql",
+      "bytes": 187,
+      "sha256": "01fcb799f3bf111d4ccbcb50aaccee66f13b6b214f54b858b9623f3d49aed4f3"
+    },
+    {
+      "path": "sql/migrations/sqlite/V001__core_tables.sql",
+      "bytes": 831,
+      "sha256": "8cc37bc749b21a96c0e5e52063e079f3518a688010e5a6600ab6bbcde74fda9c"
+    },
+    {
+      "path": "sql/migrations/sqlite/V002__workflow_tables.sql",
+      "bytes": 1376,
+      "sha256": "cfacc8fd61617cd95ee82599cd508ac987b257440b5af2aca4da9096db968648"
+    },
+    {
+      "path": "sql/migrations/sqlite/V003__record_tables.sql",
+      "bytes": 544,
+      "sha256": "7f212e0d310b543932affb5dcd771fd77c8b3bc5089015e1abbf75c654ade02b"
+    },
+    {
+      "path": "workflows/L1_budget_compilation.yaml",
+      "bytes": 2933,
+      "sha256": "731e52a4ad83fb38e4267878a1b2cbba1ffa2c4890310b067a208547ef5d538b"
+    },
+    {
+      "path": "workflows/L2_budget_review.yaml",
+      "bytes": 1301,
+      "sha256": "2ceed92dbb231ee3df54405b9a264c06d049a176a0976f2dabde876c3915e78e"
+    },
+    {
+      "path": "workflows/L3_settlement_compilation.yaml",
+      "bytes": 1056,
+      "sha256": "cdd22994da95eeadaeb5fb11db82881db9b28bce8a5570c2be136bf00ceefe5d"
+    },
+    {
+      "path": "workflows/L4_settlement_review.yaml",
+      "bytes": 859,
+      "sha256": "d853cde71be6b4915041f64ced2eeef4d3d586e61222606ce338f9e1fc069a6a"
+    },
+    {
+      "path": "workflows/L5_tender_bid.yaml",
+      "bytes": 851,
+      "sha256": "b447ebf0909efdbb8e26071c4e63662e54b531109eddd9eea3ff2a745795fa2c"
+    },
+    {
+      "path": "workflows/L6_appraisal_shadow.yaml",
+      "bytes": 1134,
+      "sha256": "ca2a2bce7f781de5d816a36171e011ac53296a980eedf11d42e975f8cb695e3d"
+    }
+  ]
+}

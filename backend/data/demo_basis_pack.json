@@ -1,0 +1,6 @@
+{
+  "basis_pack_id":"DEMO-HENAN-TEST","region_code":"410100","region_level":"CITY","major":"BUILDING","effective_date":"2026-01-01",
+  "measurement_standard_version":"GB/T 50854-2024 [TEST ONLY]","pricing_standard_version":"GB/T 50500-2024 [TEST ONLY]",
+  "quota_pack_version":"Q-TEST-ONLY","rule_version_scope":"HENAN_2025","precision_rule_version":"P-TEST","status":"DRAFT",
+  "sources":[{"source_id":"SRC-TEST","title":"测试占位来源","source_type":"TEST","license_status":"TEST_ONLY","verified":false}],"test_only":true
+}
